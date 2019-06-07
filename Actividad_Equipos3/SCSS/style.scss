@@ -1,0 +1,136 @@
+html, body {
+    width: 600px;
+    height: 800px;
+    text-align: center;
+}
+
+
+.headers{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: steelblue;
+    font-size: 36px;
+}
+.tabla_alumnos{   
+    font-family: Arial;
+    border-spacing: 20px;
+    text-align: center;
+    color: royalblue;
+    background-color: bisque;
+    font-size: 26px;
+}
+
+.logotipo{
+    align-content: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+input[type=text] {
+    text-align: right;
+  }
+
+.formulario_registro{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: aliceblue;
+    background-color: rebeccapurple;
+    text-align: center;
+}
+
+.formulario_calificaciones{
+    font-family: sans-serif;
+    font-size: 24px;
+    background-color: darksalmon;
+    text-align: justify;
+}
+
+.input_text {
+    background-color: lightblue;
+    border-radius: 25px;
+}
+
+@mixin pantalla($color){ /* un mixin es basicamente una funcion pero solo declarativo (width, tamanio, padding, color, etc)*/
+    width: 100%;
+    color:$color;
+}
+
+@media(min-width:480px) and (min-height:320px){
+
+    label{
+        @include pantalla(gray);
+    }
+
+    form{
+        br{
+            display: inline;
+        }
+    }
+    
+    img{
+        display: none;
+    }
+    .div_vertical_perfil{
+        display: none;
+    }
+}
+
+@media(min-width:768px) and (min-height:1024px){
+
+    label{
+        line-break: true;
+        @include pantalla(lightblue);
+    }
+
+    img{
+        display: inline;
+    }
+
+    form{
+        br{
+            display: none;
+        }
+    }
+    .div_vertical_perfil{
+        display: none;
+    }
+}
+
+@media(min-width:1680px) and (min-height:1050px){
+
+    label{
+        @include pantalla(lightblue);
+    }
+
+    img{
+        display: inline;
+    }
+
+    form{
+        br{
+            display: inline;
+        }
+    }
+    .div_vertical_perfil{
+        display: inline-block;
+    }
+}
+
+@mixin split_screen($width) {
+    width: $width;
+     
+}
+
+.div_vertical_form{
+    @include split_screen(40%);
+    position:fixed;
+}
+
+.div_vertical_perfil{
+    padding-left: 40%;
+    position:fixed;
+    
+}
+
