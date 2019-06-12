@@ -1,0 +1,13 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "asociaciones";
+@import "login";
+@import "publicaciones";
+@import "nuevo_anuncio";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    background-color: #f3f3f3;
+}
