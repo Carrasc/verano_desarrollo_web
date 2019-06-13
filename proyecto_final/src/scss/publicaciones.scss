@@ -1,3 +1,7 @@
+h1{
+    color:gray;
+    font-size: 25px;
+}
 .div-principal-anuncios{
     width:100%;
     box-sizing: border-box;
@@ -7,7 +11,7 @@
 }
 
 .div-principal-publicacion{
-    background-color: #f9f9f9;
+    background-color: #e0e0e0;
     width:100%;
     height: 20em;
     display: inline-block;
@@ -48,14 +52,41 @@
     width:24%;
     height:100%;
     display: inline-block;
+    padding: 10px 10px;
 }
 
+.principal-boton{
+    margin-top: 25%;
+}
 
+.iframe-mapa{
+    width: 100%;
+    height: 100%;
+}
+
+.boton-donaciones-principal{
+    bottom: 10%;
+}
+@media (max-width:599px){
+    .div-principal-mapa{
+        display: none;
+    }
+    .div-principal-informacion{
+        width:40%;
+    }
+    .div-principal-imagen{
+        width:58%;
+    }
+}
+/*
 @media (min-width:300px){
+    .div-principal-mapa{
+        display: inline;
+    }
     .div-principal-publicacion{
         height: 7em;
     }
-}
+}*/
 @media (min-width:600px){
     .div-principal-publicacion{
         height: 10em;
@@ -64,5 +95,31 @@
 @media (min-width:1000px){
     .div-principal-publicacion{
         height: 15em;
+    }
+}
+
+@media (max-width:300px){
+    .div-principal-informacion{
+        font-size: 6px;
+    }
+    h1{
+        font-size: 10px;
+    }
+}
+@media (max-width:600px){
+    .div-principal-informacion{
+        font-size: 9px;
+    }
+    h1{
+        font-size: 15px;
+    }
+}
+@media (max-width:1000px){
+
+    .div-principal-informacion{
+        font-size: 10px;
+    }
+    h1{
+        font-size: 20px;
     }
 }

@@ -3,11 +3,22 @@
 @import "login";
 @import "publicaciones";
 @import "nuevo_anuncio";
-
+@import "signup";
+@import "descripcion";
+@import "perfil_usuario";
 *{
     margin: 0;
     padding: 0;
 }
 html, body{
     background-color: #f3f3f3;
+    //font-family: font-primaria;
 }
+
+/*
+@font-face {
+    font-family: font-primaria;
+    src: url("../../dist/fonts/Molengo-Regular.ttf");
+  }
+  */
+

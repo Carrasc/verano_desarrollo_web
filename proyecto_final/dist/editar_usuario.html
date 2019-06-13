@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editar Usuario</title>
+</head>
+<body>
+        <header>
+                <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="index.html">HOUNDLESS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="asociaciones.html">Asociaciones </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="adopcion.html">Adopci&oacute;n</a>
+                    </li>
+                    <li class="nav-item my-2 my-sm-0 active">
+                    <a class="nav-link" href="descripcion.html">Informaci&oacute;n <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item my-2 my-sm-0 active">
+                        <a class="nav-link" href="perfil_usuario.html">Perfil <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+    <div class="div-contenido-signup">
+        <form class="form-login-signup" action="perfil_usuario.html">
+            <h1 class="header-principal-edituser">Usuario 1</h1>
+            <input type="text" id="inputName" class="form-control" placeholder="Nombre Completo" required="">
+            <br>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Correo" required="">
+            <br>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <br>
+            <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirma Password" required="">
+            <button class="btn btn-lg btn-primary btn-block bttn-lg-signup" type="submit">Guardar</button>
+            <a href="perfil_usuario.html" class="link-sesion">Cancelar</a>
+        </form>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

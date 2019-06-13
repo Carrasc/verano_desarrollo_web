@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Sign Up</title>
 </head>
 <body>
-    <div class="div-contenido">
-        <form class="form-login">
-            <img class="logotipo" src="img/2.jpg" alt="Logotipo">
-            <h1 class="header-principal">Iniciar Sesion</h1>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-            <div class="check-main">
-                <label>
-                <input type="checkbox" value="remember-me"> Recordarme
-                </label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block bttn-lg" type="submit">Iniciar Sesion</button>
-            <button class="btn btn-lg btn-primary btn-block bttn-lg" type="submit">Registrarse</button>
-            <p class="footer-hl">Houndless</p>
-        </form>
+    <div class="div-mayor-form">
+        <div class="div-contenido-signup">
+            <form class="form-login-signup" action="login.html">
+                <img class="logotipo-signup" src="img/Perros_callejeros.jpg" alt="Logotipo">
+                <h2>
+                    Houndless 
+                </h2>
+                <h5 class="header-principal-crearcuenta">Crear Cuenta</h1>
+                <input type="text" id="inputName" class="form-control" placeholder="Nombre Completo" required="">
+                <br>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Correo" required="">
+                <br>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <br>
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirma Password" required="">
+                <button class="btn btn-lg btn-primary btn-block bttn-lg-signup" type="submit">Iniciar Sesi&oacute;n</button>
+                <a href="login.html" class="link-sesion">¿Ya tienes una cuenta? Inicia Sesi&oacute;n</a>
+            </form>
+        </div>
     </div>
     <script src="./bundle.js"></script>
   </body>
