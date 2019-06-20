@@ -1,0 +1,40 @@
+<div class="div-forma-anuncio">
+    <form action="index.html">
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Título del anuncio</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Raza</label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Chihuahua</option>
+            <option>Paston Alemán</option>
+            <option>Beagle</option>
+            <option>Doverman</option>
+            <option>Pitbull</option>
+            <option>Bulldog</option>
+            <option>Golden Retreiever</option>
+            <option>Xochoizquintle</option>
+            <option>San Bernardo</option>
+            <option>Sahueso</option>
+            <option>Criollo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Descripción anuncio</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba una descripción acerca del perrito. Ej. Condicion actual, tamanio, personalidad, etc."></textarea>
+        </div>
+        <div class="div-map">
+          <label for="exampleFormControlInput1">Indique donde encontro al perrito</label>
+          <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;height:500px;">
+            <div id="mymap-canvas" style="height:100%; width:100%;max-width:100%;">
+              <iframe class="iframe-anuncio" src="https://www.google.com/maps/embed/v1/place?q=cdmx&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            </div>
+              <a class="googlemap-enabler" href="https://www.embed-map.com" id="enable-mapdata">https://www.embed-map.com</a>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="btn btn-lg btn-primary btn-block">Publicar</button>
+        </div>
+</form>
+</div>
