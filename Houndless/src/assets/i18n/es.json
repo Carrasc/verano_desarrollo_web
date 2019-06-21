@@ -1,0 +1,28 @@
+{
+    "Navbar":
+    { 
+        "Principal": "Principal",
+        "Asociaciones": "Asociaciones",
+        "Adopcion": "Adopción", 
+        "Informacion": "Información", 
+        "Perfil": "Perfil", 
+        "Anuncio-adopcion": "+ Anuncio"
+    },
+    "Formulario":
+    {
+        "matricula":"Matricula",
+        "nombre":"Nombre(s)",
+        "paterno":"A. Paterno",
+        "materno":"A Manrno"
+    },
+    "Anuncio":
+    {
+        "Donar":"Donar"
+    },
+    "Asociacion":
+    {
+        "Donar":"Donar",
+        "Contactar":"Contactar",
+        "Publicaciones":"Ver Publicaciones"
+    }
+}

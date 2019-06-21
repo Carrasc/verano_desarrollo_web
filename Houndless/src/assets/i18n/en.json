@@ -1,0 +1,28 @@
+{
+    "Navbar":
+    {
+        "Principal": "Home",
+        "Asociaciones": "Associations",
+        "Adopcion": "Adoptions", 
+        "Informacion": "Information", 
+        "Perfil": "User profile", 
+        "Anuncio-adopcion": "+ Create post"
+    },
+    "Formulario":
+    {
+        "matricula":"ID",
+        "nombre":"First Name",
+        "paterno":"Last Name",
+        "materno":"Mother's Name"
+    },
+    "Anuncio":
+    {
+        "Donar":"Donate"
+    },
+    "Asociacion":
+    {
+        "Donar":"Donar",
+        "Contactar":"",
+        "Publicaciones": "See posts"
+    }
+}

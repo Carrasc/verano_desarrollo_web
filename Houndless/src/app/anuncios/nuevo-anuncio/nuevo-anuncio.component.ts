@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NuevoAnuncio} from '../../models/nuevo-anuncio';
+
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-nuevo-anuncio',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nuevo-anuncio.component.scss']
 })
 export class NuevoAnuncioComponent implements OnInit {
+  nuevo_anuncio : NuevoAnuncio;
+  razas=["Chihuahua", "Paston Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
+  constructor(private router: Router) { 
 
-  constructor() { }
+    this.nuevo_anuncio = new NuevoAnuncio();
+
+  }
 
   ngOnInit() {
+  }
+
+  enviar(){
+    
+   this.router.navigate(['',this.nuevo_anuncio]);
+    console.log(this.nuevo_anuncio);
   }
 
 }

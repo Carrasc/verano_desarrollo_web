@@ -8,23 +8,27 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-            <a class="nav-link" href="#">Principal</a>
+            <a class="nav-link" href="#">{{'Navbar.Principal' | translate }}</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="asociaciones">Asociaciones</a>
+            <a class="nav-link" href="asociaciones">{{'Navbar.Asociaciones' | translate }}</a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="adopcion">Adopci&oacute;n<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="adopcion">{{'Navbar.Adopcion' | translate }}</a>
             </li>
             <li class="nav-item my-2 my-sm-0">
-            <a class="nav-link" href="descripcion">Informaci&oacute;n</a>
+            <a class="nav-link" href="descripcion">{{'Navbar.Informacion' | translate }}</a>
             </li>
             <li class="nav-item my-2 my-sm-0">
-                <a class="nav-link" href="perfil_usuario">Perfil</a>
+                <a class="nav-link" href="perfil_usuario">{{'Navbar.Perfil' | translate }}</a>
             </li>
         </ul>
+
+        <button class="btn btn-secondary my-2 my-sm-0" [ngClass]="{'disabled': activeLang == 'es'}" (click)="cambiarLenguaje('es')">ES</button>
+        <button class="btn btn-secondary my-2 my-sm-0" [ngClass]="{'disabled': activeLang == 'en'}" (click)="cambiarLenguaje('en')">EN</button>
+        
         <form class="form-inline mt-2 mt-md-0" action="nuevoAnuncio">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">+ Anuncio Adopci&oacute;n</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{{'Navbar.Anuncio-adopcion' | translate }}</button>
         </form>
         </div>
     </nav>
