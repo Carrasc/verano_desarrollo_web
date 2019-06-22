@@ -1,0 +1,88 @@
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+.div-descripcion-informacion{
+    width: 100%;
+}
+.div-descripcion-mision{
+    height: 100%;
+    width: 100%;
+}
+.div-descripcion-vision{
+    height: 100%;
+    width: 100%;
+}
+.div-descripcion-valores{
+    height: 100%;
+    width: 100%;
+}
+
+.div-descripcion-imagen img{
+    max-width: 100%;
+    max-height: 100%;
+    padding: 1em;
+}
+
+.div-descripcion-imagen{
+    box-sizing: border-box;
+    width:100%;
+    display: inline-block;
+    //height: 100%;
+    //vertical-align: top;
+
+}
+.div-descripcion-texto{
+    display: inline-block;
+    box-sizing: border-box;
+    //vertical-align: top;
+    padding: 5em;
+    width: 100%;
+    //height: 100%;
+}
+
+@media (min-width:10px){
+    .div-descripcion-informacion h3{
+        font-size: 1.1em;
+    }
+    .div-descripcion-informacion{
+        font-size: .5em;
+    }
+    .div-descripcion-texto{
+        padding: 1em;
+    }
+}
+@media (min-width:300px){
+    .div-descripcion-informacion h3{
+        font-size: 1.2em;
+    }
+    .div-descripcion-informacion{
+        font-size: .8em;
+    }
+    .div-descripcion-texto{
+        padding: 2em;
+    }
+}
+@media (min-width:600px){
+    .div-descripcion-informacion h3{
+        font-size: 1.4em;
+    }
+    .div-descripcion-informacion{
+        font-size: 1em;
+    }
+    .div-descripcion-texto{
+        padding: 3em;
+    }
+}
+@media (min-width:1000px){
+    .div-descripcion-informacion h3{
+        font-size: 1.5em;
+    }
+    .div-descripcion-informacion{
+        font-size: 1.3em;
+    }
+    .div-descripcion-texto{
+        padding: 4em;
+    }
+}
+

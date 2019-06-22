@@ -8,16 +8,20 @@
         "Perfil": "Perfil", 
         "Anuncio-adopcion": "+ Anuncio"
     },
-    "Formulario":
+    "NuevoAnuncio":
     {
-        "matricula":"Matricula",
-        "nombre":"Nombre(s)",
-        "paterno":"A. Paterno",
-        "materno":"A Manrno"
+        "titulo":"Escriba el titulo del anuncio",
+        "descripcion":"Aqui escriba toda la informacion que considere importante sobre la condicion actual del perro",
+        "ubicacion":"Donde fue encontrado el perro. Es relevante porque puede ser un perrito perdido del area",
+        "raza":"Seleccione la raza, si no la conoce, seleccione otro",
+        "publicar": "Publicar"
     },
     "Anuncio":
     {
         "Donar":"Donar"
+    },
+    "Adopcion":{
+        "Adoptar":"Adoptar"
     },
     "Asociacion":
     {

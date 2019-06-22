@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NuevoAnuncio} from '../../models/nuevo-anuncio';
+import { TranslateService } from '@ngx-translate/core';
 
 import {Router, ActivatedRoute} from '@angular/router';
 
@@ -10,11 +11,17 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class NuevoAnuncioComponent implements OnInit {
   nuevo_anuncio : NuevoAnuncio;
+  public activeLang = 'es';
   razas=["Chihuahua", "Paston Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
-  constructor(private router: Router) { 
 
+  constructor(private router: Router, private translate: TranslateService) { 
     this.nuevo_anuncio = new NuevoAnuncio();
+    this.translate.setDefaultLang(this.activeLang);
+  }
 
+  public cambiarLenguaje(lang) {
+    this.activeLang = lang;
+    this.translate.use(lang);
   }
 
   ngOnInit() {

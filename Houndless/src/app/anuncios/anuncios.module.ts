@@ -8,10 +8,14 @@ import { FormsModule }   from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { AdopcionesComponent } from './adopciones/adopciones.component';
+import { AdopcionComponent } from './adopcion/adopcion.component';
+import { NuevaAdopcionComponent } from './nueva-adopcion/nueva-adopcion.component';
 //npm install @ngx-translate/core @ngx-translate/http-loader --save
 
 @NgModule({
-  declarations: [AnuncioComponent, NuevoAnuncioComponent],
+  declarations: [AnuncioComponent, NuevoAnuncioComponent, AdopcionesComponent, AdopcionComponent, NuevaAdopcionComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -28,7 +32,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     NuevoAnuncioComponent,
-    AnuncioComponent
+    AnuncioComponent,
+    AdopcionesComponent,
+    AdopcionComponent
   ]
 })
 export class AnunciosModule { }

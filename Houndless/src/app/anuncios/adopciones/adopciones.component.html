@@ -1,0 +1,7 @@
+<!--div class="div-principal-anuncios" >
+  <div *ngFor="let adopcion of adopciones" app-adopcion [adopcion]="adopcion" ></div>
+</div>-->
+
+<div class="div-principal-anuncios">
+  <adopcion-app [data]="adop" *ngFor="let adop of adopciones"></adopcion-app>
+</div>

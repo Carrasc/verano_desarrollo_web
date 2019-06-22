@@ -8,20 +8,24 @@
         "Perfil": "User profile", 
         "Anuncio-adopcion": "+ Create post"
     },
-    "Formulario":
+    "NuevoAnuncio":
     {
-        "matricula":"ID",
-        "nombre":"First Name",
-        "paterno":"Last Name",
-        "materno":"Mother's Name"
+        "titulo":"Write the title of the adoption post",
+        "descripcion":"Here write what you consider important about the dog, like its current condition, size, etc",
+        "ubicacion":"Where did you find the dog. Its relevant because it might be a lost dog of the area",
+        "raza":"Select the race, if you dont know, you can select other",
+        "publicar": "Post"
     },
     "Anuncio":
     {
         "Donar":"Donate"
     },
+    "Adopcion":{
+        "Adoptar":"Adopt"
+    },
     "Asociacion":
     {
-        "Donar":"Donar",
+        "Donar":"Donate",
         "Contactar":"",
         "Publicaciones": "See posts"
     }

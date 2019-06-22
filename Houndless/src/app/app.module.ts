@@ -14,10 +14,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // Componentes del module anuncios
 import { AnuncioComponent } from './anuncios/anuncio/anuncio.component';
 import { NuevoAnuncioComponent } from './anuncios/nuevo-anuncio/nuevo-anuncio.component';
+import { AdopcionesComponent } from './anuncios/adopciones/adopciones.component';
+import { AdopcionComponent } from './anuncios/adopcion/adopcion.component';
 
 // Componentes del module perfiles
 import { PerfilComponent } from './perfiles/perfil/perfil.component';
 import { FormNuevoUsuarioComponent } from './perfiles/form-nuevo-usuario/form-nuevo-usuario.component';
+import { AsociacionesComponent} from './perfiles/asociaciones/asociaciones.component';
+
+// Componente del module informacion
+import { InformacionComponent } from './components/informacion/informacion.component';
 
 // El router 
 import { Routes, RouterModule } from '@angular/router';
@@ -49,6 +55,18 @@ const routes: Routes = [
       path: 'nuevo_usuario',
       component: FormNuevoUsuarioComponent
     }
+    ,{
+      path:"informacion",
+      component: InformacionComponent
+    },
+    {
+      path:'adopciones',
+      component: AdopcionesComponent
+    },
+    {
+      path:'asociaciones',
+      component: AsociacionesComponent
+    }
 
 ];
 
@@ -56,7 +74,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     TituloComponent,
-    NavbarComponent
+    NavbarComponent,
+    InformacionComponent
   ],
   imports: [
     FormsModule,
