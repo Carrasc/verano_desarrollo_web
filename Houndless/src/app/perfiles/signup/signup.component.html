@@ -1,0 +1,34 @@
+<div class="div-mayor-form">
+    <div class="div-contenido-signup">
+        <form #NuevoUsuario="ngForm" class="div-form-login" >
+          <img class="logotipo-signup" src="assets/imgs/Perros_callejeros.jpg" alt="Logotipo">
+          <h2> Houndless </h2>
+          <h5 class="header-principal-crearcuenta">{{'NuevoUsuario.Crear' | translate}}</h5>
+          <div class="form-group">
+            <label for="nombre">{{'NuevoUsuario.Nombre' | translate}}</label>
+            <input type="email" class="form-control" id="nombre" placeholder="{{'NuevoUsuario.NombreP' | translate}}" [(ngModel)]="nuevo_usuario.nombre_completo" name="nombre" required="">
+          </div>
+      
+          <div class="form-group">
+            <label for="email">{{'NuevoUsuario.Correo' | translate}}</label>
+            <input type="email" class="form-control" id="email" placeholder="{{'NuevoUsuario.CorreoP' | translate}}" [(ngModel)]="nuevo_usuario.correo" name="email" required="">
+          </div>
+        
+          <div class="form-group">
+            <label for="contrasenia">{{'NuevoUsuario.Contrasenia' | translate}}</label>
+            <input type="password" class="form-control" id="contrasenia" placeholder="{{'NuevoUsuario.ContraseniaP' | translate}}" name="contrasenia" [(ngModel)]="nuevo_usuario.contrasenia" required="">
+          </div>
+      
+          <div class="form-group">
+            <label for="contrasenia2">{{'NuevoUsuario.Contrasenia2' | translate}}</label>
+            <input type="password" class="form-control" id="contrasenia2" placeholder="{{'NuevoUsuario.Contrasenia2P' | translate}}" name="contrasenia2" [(ngModel)]="nuevo_usuario.contrasenia2" required="">
+          </div>
+      
+          <div>
+            <button class="btn btn-lg btn-primary btn-block bttn-lg" type="submit" (click)="enviar();NuevoUsuario.reset();">{{'NuevoUsuario.Registro' | translate}}</button>
+            <a href="login" style="font-size:16pt;">{{ 'NuevoUsuario.Sesion' | translate}}</a>
+          </div>
+      </form>
+    </div>
+</div>
+

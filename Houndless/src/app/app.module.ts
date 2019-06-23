@@ -21,6 +21,8 @@ import { AdopcionComponent } from './anuncios/adopcion/adopcion.component';
 import { PerfilComponent } from './perfiles/perfil/perfil.component';
 import { FormNuevoUsuarioComponent } from './perfiles/form-nuevo-usuario/form-nuevo-usuario.component';
 import { AsociacionesComponent} from './perfiles/asociaciones/asociaciones.component';
+import { LoginComponent } from './perfiles/login/login.component';
+import { SignupComponent } from './perfiles/signup/signup.component';
 
 // Componente del module informacion
 import { InformacionComponent } from './components/informacion/informacion.component';
@@ -36,7 +38,15 @@ import { FormsModule }   from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NuevaAdopcionComponent } from './anuncios/nueva-adopcion/nueva-adopcion.component';
 //npm install @ngx-translate/core @ngx-translate/http-loader --save
+
+import {MatDialogModule} from '@angular/material/dialog';
+import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// npm install --save @angular/material @angular/cdk @angular/animations
+// Meter a imports MatDialogModule y BrowserAnimationsModule. Exportar MatDialogueModule
+// Luego meter a entryComponent el componente a ser mostrado en el pop up 
+// Finalmente agregar al algular.json, styles -> "input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
 
 const routes: Routes = [
     {
@@ -54,8 +64,13 @@ const routes: Routes = [
     {
       path: 'nuevo_usuario',
       component: FormNuevoUsuarioComponent
+    },
+    {
+      path: 'nuevaAdopcion',
+      component: NuevaAdopcionComponent
     }
-    ,{
+    ,
+    {
       path:"informacion",
       component: InformacionComponent
     },
@@ -66,8 +81,15 @@ const routes: Routes = [
     {
       path:'asociaciones',
       component: AsociacionesComponent
+    },
+    {
+      path:'login',
+      component: LoginComponent
+    },
+    {
+      path:'signup',
+      component: SignupComponent
     }
-
 ];
 
 @NgModule({
@@ -75,7 +97,7 @@ const routes: Routes = [
     AppComponent,
     TituloComponent,
     NavbarComponent,
-    InformacionComponent
+    InformacionComponent,  
   ],
   imports: [
     FormsModule,
@@ -92,10 +114,13 @@ const routes: Routes = [
         },
         deps: [ HttpClient ]
       }
-    })
+    }),
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  exports:[RouterModule],
+  exports:[RouterModule, MatDialogModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NuevaAdopcionComponent, NuevoAnuncioComponent]
 })
 export class AppModule { }

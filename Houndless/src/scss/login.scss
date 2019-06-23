@@ -1,0 +1,67 @@
+.text-center{
+    align-content: center;
+}
+
+.logotipo{
+    padding: 2em;
+    height: 300px;
+}
+
+.div-form-login{
+    text-align: center;
+    margin: auto; 
+    height: 100%;
+    width:450px;
+    color: black;
+}
+
+.form-login{
+    text-align: center;
+    margin: auto; 
+    height: 100%;
+    width:450px;
+    color: black;
+}
+.div-contenido h2{
+    margin: 1em 0;
+}
+.div-mayor-form{
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 100%;
+}
+
+.header-principal{
+    margin-bottom: 1em;
+    font-size: 24pt;
+}
+
+.bttn-lg{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.div-contenido{
+    height: 100%;
+    width: 100%;
+}
+
+.link-regis{
+    font-size: 14pt;
+}
+
+.textbox-usr{
+    margin: 1em 0;
+}
+
+@media (max-width:600px){
+    .form-login{
+        height: 100%;
+        width:100%;
+    }
+    .logotipo{
+        padding: 1em;
+        width: 100%;
+        height:100%;
+    }
+}

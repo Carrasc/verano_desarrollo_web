@@ -10,10 +10,16 @@ import {AdopcionesService} from '../../services/adopciones.service';
 })
 export class AdopcionesComponent implements OnInit {
   adopciones;
+  test = [];
 
   constructor(adopcionesService: AdopcionesService) {
     this.adopciones = adopcionesService.getAdopciones();
+    for (let i in this.adopciones){
+      this.test[i] = this.adopciones[i].tags;
+      console.log(this.test[i]);
+    }
    }
+
 
   ngOnInit() {
   }

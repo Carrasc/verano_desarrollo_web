@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {AnunciosService}  from '../../services/anuncios.service';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'anuncio',
@@ -10,19 +9,20 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AnuncioComponent implements OnInit {
   anuncios;
-  public activeLang = 'es';
+  test = [];
 
-  constructor(anunciosService: AnunciosService, private translate: TranslateService) { 
+  constructor(anunciosService: AnunciosService) { 
+    
     this.anuncios = anunciosService.getAnuncios();
-    this.translate.setDefaultLang(this.activeLang);
+    for (let i in this.anuncios){
+      this.test[i] = this.anuncios[i].tags;
+      console.log(this.test[i]);
+    }
+    
   }
-
-	public cambiarLenguaje(lang) {
-    	this.activeLang = lang;
-    	this.translate.use(lang);
-  	}
 
   ngOnInit() {
   }
+  
 
 }

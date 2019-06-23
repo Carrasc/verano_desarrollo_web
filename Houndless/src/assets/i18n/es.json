@@ -6,15 +6,29 @@
         "Adopcion": "Adopción", 
         "Informacion": "Información", 
         "Perfil": "Perfil", 
-        "Anuncio-adopcion": "+ Anuncio"
+        "Anuncio": "+ Anuncio",
+        "Anuncio-nueva-adopcion": "+ Adopción"
     },
     "NuevoAnuncio":
     {
-        "titulo":"Escriba el titulo del anuncio",
-        "descripcion":"Aqui escriba toda la informacion que considere importante sobre la condicion actual del perro",
-        "ubicacion":"Donde fue encontrado el perro. Es relevante porque puede ser un perrito perdido del area",
+        "titulo":"Escriba el título del anuncio",
+        "descripcion":"Aquí escriba toda la información que considere importante sobre la condición actual del perro",
+        "ubicacion":"Dónde fue encontrado el perro. Es relevante porque puede ser un perrito perdido del área",
         "raza":"Seleccione la raza, si no la conoce, seleccione otro",
-        "publicar": "Publicar"
+        "publicar": "Publicar",
+        "imagen": "Seleccione una imagen"
+    },
+    "NuevaAdopcion":
+    {
+        "titulo":"Título del anuncio",
+        "tituloP":"Escriba el título del anuncio",
+        "descripcion":"Descripción del anuncio",
+        "descripcionP":"Aquí escriba toda la información que considere importante sobre la condición actual del perro",
+        "edad_perro":"Edad del perro",
+        "edad_perroP":"La edad en años estimada del perro",
+        "raza":"Seleccione la raza del perro, si no la conoce, seleccione otro",
+        "publicar": "Publicar",
+        "imagen": "Seleccione una imagen"
     },
     "Anuncio":
     {
@@ -28,5 +42,21 @@
         "Donar":"Donar",
         "Contactar":"Contactar",
         "Publicaciones":"Ver Publicaciones"
+    },
+    "NuevoUsuario":
+    {
+        "Nombre":"Nombre Completo",
+        "NombreP":"Ingrese su nombre completo",
+        "Sesion":"Iniciar Sesión",
+        "Registro":"Registrarse",
+        "Correo":"Correo Electrónico",
+        "CorreoP":"Ingrese un correo electrónico válido",
+        "CorreoLP":"Ingrese su correo electrónico",
+        "Contrasenia":"Contraseña",
+        "ContraseniaP":"Ingrese una contraseña",
+        "ContraseniaLP":"Ingrese su contraseña",
+        "Contrasenia2": "Repetir Contraseña",
+        "Contrasenia2P": "Repita la contraseña previamente ingresada",
+        "Crear": "Crear Usuario"
     }
 }

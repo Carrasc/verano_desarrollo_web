@@ -7,6 +7,8 @@
       <div class="div-principal-informacion">
           <h1>{{anuncio.titulo}}</h1>
           <p>{{anuncio.descripcion}} </p>
+          <p style="font-style: italic"> {{ anuncio.raza }} </p>
+          <a *ngFor="let tag of anuncio.tags; let i = index" href="#" class="badge badge-pill badge-info" style="margin-right: 5px">{{ anuncio.tags[i] }}</a>
           <form action="https://www.paypal.me/pelagiodaniel"><button class="btn btn-primary boton-donaciones-principal">{{'Anuncio.Donar' | translate}}</button></form>
       </div>
   </div>

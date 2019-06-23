@@ -1,3 +1,34 @@
-<p>
-  nueva-adopcion works!
-</p>
+<div class="div-forma-anuncio">
+  <form #NuevaAdopcion="ngForm">
+      <div class="form-group">
+        <label for="titulo">{{'NuevaAdopcion.titulo' | translate}}</label>
+        <input type="text" class="form-control" id="titulo" placeholder="{{'NuevaAdopcion.tituloP' | translate}}" [(ngModel)]="nueva_adopcion.titulo" name="titulo">
+      </div>
+    
+       <div class="form-group">
+        <label for="descripcion">{{'NuevaAdopcion.descripcion' | translate}}</label>
+        <input type="text" class="form-control" id="descripcion" placeholder="{{'NuevaAdopcion.descripcionP' | translate}}" name="descripcion" [(ngModel)]="nueva_adopcion.descripcion">
+      </div>
+    
+        <div class="form-group">
+        <label for="edad_perro">{{'NuevaAdopcion.edad_perro' | translate}}</label>
+        <input type="number" class="form-control" id="edad_perro" placeholder="{{'NuevaAdopcion.edad_perroP' | translate}}" name="ubicacion" [(ngModel)]="nueva_adopcion.edad_perro"  #name="ngModel" required="required">
+      </div>
+    
+      <div class="form-group">
+        <label for="raza">{{'NuevaAdopcion.raza' | translate}}</label>
+        <select class="form-control" id="raza" [(ngModel)]="nueva_adopcion.raza" name="raza" required="required">
+          <option></option>
+          
+            <option *ngFor="let raza of razas" [value]="raza">{{raza | translate}}</option>
+      
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="img_path">{{'NuevaAdopcion.imagen' | translate}}</label><br>
+        <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+        <button (click)="fileInput.click()">Select File</button>
+      </div>
+       <button type="submit" class="btn btn-success" (click)="enviar();NuevaAdopcion.reset();" >{{ 'NuevoAnuncio.publicar' | translate }}</button>
+    </form>
+  </div>

@@ -19,14 +19,16 @@
       <label for="raza">{{'NuevoAnuncio.raza' | translate}}</label>
       <select class="form-control" id="raza" [(ngModel)]="nuevo_anuncio.raza" name="raza" required="required">
         <option></option>
-        
           <option *ngFor="let raza of razas" [value]="raza">{{raza}}</option>
-    
       </select>
     </div>
+    <div class="form-group">
+      <label for="img_path">{{'NuevoAnuncio.imagen' | translate}}</label><br>
+      <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+      <button (click)="fileInput.click()">Select File</button>
+    </div>
   
-  
-     <button type="submit" class="btn btn-success" (click)="enviar();NuevoAnuncio.reset();" >{{ 'NuevoAnuncio.publicar' | translate }}</button>
+     <button type="submit" class="btn btn-success" (click)="enviar();NuevoAnuncio.reset();">{{ 'NuevoAnuncio.publicar' | translate }}</button>
   
   </form>
 </div>

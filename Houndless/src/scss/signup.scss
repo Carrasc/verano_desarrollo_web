@@ -1,0 +1,58 @@
+.text-center-signup{
+    align-content: center;
+}
+
+.logotipo-signup{
+    padding: 1em;
+    height: 350px;
+    width: 100%;
+}
+
+.form-login-signup{
+    text-align: center;
+    margin: auto; 
+    height: 100%;
+    width:450px;
+    color: black;
+}
+.div-contenido-signup h2{
+    margin: 1em 0;
+}
+.div-mayor-form{
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 100%;
+}
+
+.header-principal-edituser{
+    margin: 4em 0 2em 0;
+}
+
+.header-principal-crearcuenta{
+    margin-bottom: .5em;
+}
+
+.bttn-lg-signup{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.div-contenido-signup{
+    height: 100%;
+    width: 100%;
+}
+
+.link-sesion{
+    font-size: 14pt;
+}
+
+@media (max-width:600px){
+    .form-login-signup{
+        height: 100%;
+        width:100%;
+    }
+    .logotipo-signup{
+        padding: 1em;
+        height:100%;
+    }
+}

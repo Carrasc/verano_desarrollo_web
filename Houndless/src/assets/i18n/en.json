@@ -6,7 +6,8 @@
         "Adopcion": "Adoptions", 
         "Informacion": "Information", 
         "Perfil": "User profile", 
-        "Anuncio-adopcion": "+ Create post"
+        "Anuncio": "+ Post",
+        "Anuncio-nueva-adopcion": "+ Adoption"
     },
     "NuevoAnuncio":
     {
@@ -14,7 +15,17 @@
         "descripcion":"Here write what you consider important about the dog, like its current condition, size, etc",
         "ubicacion":"Where did you find the dog. Its relevant because it might be a lost dog of the area",
         "raza":"Select the race, if you dont know, you can select other",
-        "publicar": "Post"
+        "publicar": "Post",
+        "imagen": "Upload an image for the post"
+    },
+    "NuevaAdopcion":
+    {
+        "titulo":"Write the title of the adoption post",
+        "descripcion":"Here write what you consider important about the dog, like its current condition, size, etc",
+        "edad_perro":"The aproximate age of the dog",
+        "raza":"Select the race, if you dont know, you can select other",
+        "publicar": "Post",
+        "imagen": "Upload an image for the post"
     },
     "Anuncio":
     {
@@ -28,5 +39,21 @@
         "Donar":"Donate",
         "Contactar":"",
         "Publicaciones": "See posts"
+    },
+    "NuevoUsuario":
+    {
+        "Nombre":"Full Name",
+        "NombreP":"Write your full name",
+        "Sesion":"Sign In",
+        "Registro":"Sign Up",
+        "Correo":"Email",
+        "CorreoP":"Write a valid email",
+        "CorreoLP":"Write your email",
+        "Contrasenia":"Password",
+        "ContraseniaP":"Write a password",
+        "ContraseniaLP":"Write your password",
+        "Contrasenia2": "Repeat password",
+        "Contrasenia2P": "Rewrite the password",
+        "Crear": "Create user"
     }
 }

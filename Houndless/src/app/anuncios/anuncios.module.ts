@@ -34,7 +34,7 @@ import { NuevaAdopcionComponent } from './nueva-adopcion/nueva-adopcion.componen
     NuevoAnuncioComponent,
     AnuncioComponent,
     AdopcionesComponent,
-    AdopcionComponent
+    AdopcionComponent,
   ]
 })
 export class AnunciosModule { }

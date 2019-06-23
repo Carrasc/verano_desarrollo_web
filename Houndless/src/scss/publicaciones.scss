@@ -15,7 +15,7 @@ h1{
     //position: fixed;
     background-color: #e0e0e0;
     width:100%;
-    height: 20em;
+    height: 25em;
     display: inline-block;
     margin: 0.5em 0px 0px 0px;
 }
@@ -23,7 +23,7 @@ h1{
 .div-principal-imagen{
     box-sizing: border-box;
     padding: 2%;
-    width:30%;
+    width:40%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
@@ -43,7 +43,7 @@ h1{
 .div-principal-informacion{
     vertical-align: top;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 2em;
     width:59%;
     height:100%;
     display: inline-block;
@@ -81,14 +81,6 @@ h1{
     }
 }
 /*
-@media (min-width:300px){
-    .div-principal-mapa{
-        display: inline;
-    }
-    .div-principal-publicacion{
-        height: 7em;
-    }
-}*/
 @media (min-width:600px){
     .div-principal-publicacion{
         height: 10em;
@@ -99,7 +91,7 @@ h1{
         height: 15em;
     }
 }
-
+*/
 @media (max-width:300px){
     .div-principal-informacion{
         font-size: 6px;

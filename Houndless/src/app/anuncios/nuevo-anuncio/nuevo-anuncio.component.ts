@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NuevoAnuncio} from '../../models/nuevo-anuncio';
-import { TranslateService } from '@ngx-translate/core';
 
 import {Router, ActivatedRoute} from '@angular/router';
 
@@ -11,17 +10,11 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class NuevoAnuncioComponent implements OnInit {
   nuevo_anuncio : NuevoAnuncio;
-  public activeLang = 'es';
   razas=["Chihuahua", "Paston Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
+  selectedFile:File;
 
-  constructor(private router: Router, private translate: TranslateService) { 
+  constructor(private router: Router) { 
     this.nuevo_anuncio = new NuevoAnuncio();
-    this.translate.setDefaultLang(this.activeLang);
-  }
-
-  public cambiarLenguaje(lang) {
-    this.activeLang = lang;
-    this.translate.use(lang);
   }
 
   ngOnInit() {
@@ -31,6 +24,13 @@ export class NuevoAnuncioComponent implements OnInit {
     
    this.router.navigate(['',this.nuevo_anuncio]);
     console.log(this.nuevo_anuncio);
+    // upload code goes here
   }
+
+  onFileChanged(event) {
+    this.selectedFile = event.target.files[0];
+    console.log(this.selectedFile);
+  }
+
 
 }
