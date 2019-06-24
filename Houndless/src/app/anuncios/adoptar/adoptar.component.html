@@ -1,0 +1,20 @@
+<div class="div-forma-anuncio">
+  <form #Adopcion="ngForm">
+    <div class="form-group">
+      <label for="razon">{{'Adopcion.Razon' | translate}}</label>
+      <input type="text" class="form-control" id="razon" placeholder="{{'Adopcion.RazonP' | translate}}" [(ngModel)]="adopcion.razon" name="razon">
+    </div>
+  
+      <div class="form-group">
+      <label for="animales">{{'Adopcion.Animales' | translate}}</label>
+      <input type="text" class="form-control" id="animales" placeholder="{{'Adopcion.AnimalesP' | translate}}" name="animales" [(ngModel)]="adopcion.animales">
+    </div>
+  
+      <div class="form-group">
+      <label for="espacio">{{'Adopcion.Espacio' | translate}}</label>
+      <input type="text" class="form-control" id="espacio" placeholder="{{'Adopcion.EspacioP' | translate}}" name="espacio" [(ngModel)]="adopcion.espacio"  #name="ngModel" required="required">
+    </div>
+      <button type="submit" class="btn btn-success" >{{ 'Adopcion.Publicar' | translate }}</button>
+  </form>
+</div>
+  

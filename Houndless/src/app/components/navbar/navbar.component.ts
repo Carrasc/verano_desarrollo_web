@@ -32,24 +32,26 @@ export class NavbarComponent implements OnInit {
 
   onCreateAnuncio(){
     // If para solo tener un solo pop-up abierto al mismo tiempo
-    if(this.dialogAnuncio.openDialogs.length==0){
-      this.dialogAnuncio.open(NuevoAnuncioComponent);
+    const dialogConfigAnuncio = new MatDialogConfig();
+    dialogConfigAnuncio.disableClose = false;
+    dialogConfigAnuncio.autoFocus = false;
+    dialogConfigAnuncio.width = "80%";
+    if(this.dialogAnuncio.openDialogs.length==0)
+    {
+      this.dialogAnuncio.open(NuevoAnuncioComponent, dialogConfigAnuncio);
     }
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "70%";
     //this.dialogAnuncio.open(NuevoAnuncioComponent);
   }
 
   onCreateAdopcion(){
-    if(this.dialogAdopcion.openDialogs.length==0){
-      this.dialogAdopcion.open(NuevaAdopcionComponent);
+    const dialogConfigAdopcion = new MatDialogConfig();
+    dialogConfigAdopcion.disableClose = false;
+    dialogConfigAdopcion.autoFocus = false;
+    dialogConfigAdopcion.width = "80%";
+    if(this.dialogAdopcion.openDialogs.length==0)
+    {
+      this.dialogAdopcion.open(NuevaAdopcionComponent, dialogConfigAdopcion);
     }
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "70%";
     //this.dialogAdopcion.open(NuevaAdopcionComponent);
   }
 

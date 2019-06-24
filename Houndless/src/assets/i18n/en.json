@@ -29,7 +29,9 @@
     },
     "Anuncio":
     {
-        "Donar":"Donate"
+        "Donar":"Donate",
+        "Detalle": "Detail",
+        "Raza": "Breed"
     },
     "Adopcion":{
         "Adoptar":"Adopt"

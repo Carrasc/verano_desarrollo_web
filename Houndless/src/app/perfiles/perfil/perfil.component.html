@@ -3,20 +3,21 @@
         <img src="assets/imgs/profile.png" alt="Usr photo">
     </div>
     <div class="div-perfil-usuario-informacion">
-        <h2>Luis Fernando Carrasco <a class="edit-perfil" href="editar_usuario.html">Editar</a></h2>
+        <h2> {{ perfiles.nombre }} <a class="edit-perfil" href="editar_usuario.html">Editar</a></h2>
         <label id="typeUser">Usuario normal</label>
         <h6>
             Informaci&oacute;n Personal:
         </h6>
         <ul>
-            <li>Nombre: <code>Luis Fernando Carrasco</code></li>
+            <li>Nombre: <code> {{ perfiles.nombre }} </code></li>
+            <li>Id: <code>{{id}}</code></li>
         </ul>
         <h6>
             Datos de cuenta
         </h6>
         <ul>
-            <li>Correo: <code>luisc@gmail.com</code></li>
-            <li>N&uacute;mero telef&oacute;nico: <code>55-56-7898-67</code></li>
+            <li>Correo: <code> {{ perfiles.correo }}</code></li>
+            <li>N&uacute;mero telef&oacute;nico: <code> {{ perfiles.celular }} </code></li>
             <li>Paypal link: <code>paypal.me/pelagiodaniel</code></li>
         </ul>
         <form>

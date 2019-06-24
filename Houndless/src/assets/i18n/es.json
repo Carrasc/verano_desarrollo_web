@@ -32,10 +32,19 @@
     },
     "Anuncio":
     {
-        "Donar":"Donar"
+        "Donar":"Donar",
+        "Detalle": "Detalle",
+        "Raza": "Raza"
     },
     "Adopcion":{
-        "Adoptar":"Adoptar"
+        "Adoptar":"Adoptar",
+        "Razon": "Motivo",
+        "RazonP": "¿Cuál es el motivo para adoptar?",
+        "Animales": "Animales",
+        "AnimalesP": "¿Cuántos animales tiene actualmente?",
+        "Espacio": "Espacio",
+        "EspacioP": "¿Cuenta con espacio para tener al perro? ¿De cuánto es?",
+        "Publicar": "¡Adoptar!"
     },
     "Asociacion":
     {
@@ -57,6 +66,17 @@
         "ContraseniaLP":"Ingrese su contraseña",
         "Contrasenia2": "Repetir Contraseña",
         "Contrasenia2P": "Repita la contraseña previamente ingresada",
-        "Crear": "Crear Usuario"
+        "Crear": "Crear Usuario",
+        "Input": "CAMPO REQUERIDO"
+    },
+    "Donacion":
+    {
+        "Donador": "Donador",
+        "Cantidad": "Cantidad a Donar",
+        "Mensaje": "Mensaje en su donación",
+        "DonadorP": "Escriba el nombre del donador, puede ser anónimo",
+        "CantidadP": "Escriba la cantidad a donar en pesos",
+        "MensajeP": "Escriba algún mensaje que deseé hacer llegar al cuidador del perro",
+        "Donar": "¡Donar!"
     }
 }

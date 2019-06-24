@@ -3,7 +3,7 @@
 }
 
 .logotipo{
-    padding: 2em;
+    padding: 1em;
     height: 300px;
 }
 
@@ -23,7 +23,7 @@
     color: black;
 }
 .div-contenido h2{
-    margin: 1em 0;
+    margin: .5em 0;
 }
 .div-mayor-form{
     box-sizing: border-box;
@@ -32,7 +32,7 @@
 }
 
 .header-principal{
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     font-size: 24pt;
 }
 
@@ -52,6 +52,12 @@
 
 .textbox-usr{
     margin: 1em 0;
+}
+
+.required-input{
+    color:red;
+    font-size: 8pt;
+    margin: .3em;
 }
 
 @media (max-width:600px){

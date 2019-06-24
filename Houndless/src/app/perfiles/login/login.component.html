@@ -1,20 +1,26 @@
 <div class="div-mayor-form">
   <div class="div-contenido">
-      <form #NuevoUsuario="ngForm" class="div-form-login" >
+      <form #NuevoUsuario="ngForm" class="div-form-login">
           <img class="logotipo" src="assets/imgs/2.jpg" alt="Logotipo">
           <h1 class="header-principal">Iniciar Sesi&oacute;n</h1>
           <div class="form-group">
             <label for="email">{{'NuevoUsuario.Correo' | translate}}</label>
-            <input type="email" class="form-control" id="email" placeholder="{{'NuevoUsuario.CorreoLP' | translate}}" [(ngModel)]="nuevo_usuario.correo" name="email">
+            <input #email="ngModel" type="text" class="form-control" id="email" placeholder="{{'NuevoUsuario.CorreoLP' | translate}}" [(ngModel)]="nuevo_usuario.correo" name="email" required>
+            <div *ngIf="email.errors && (email.dirty || email.touched)">
+              <p *ngIf="email.errors.required" class="required-input">{{'NuevoUsuario.Input' | translate}}</p>
+            </div>
           </div>
         
           <div class="form-group">
             <label for="contrasenia">{{'NuevoUsuario.Contrasenia' | translate}}</label>
-            <input type="password" class="form-control" id="contrasenia" placeholder="{{'NuevoUsuario.ContraseniaLP' | translate}}" name="contraseña" [(ngModel)]="nuevo_usuario.contrasenia">
+            <input #password="ngModel" type="password" class="form-control" id="contrasenia" placeholder="{{'NuevoUsuario.ContraseniaLP' | translate}}" name="contraseña" [(ngModel)]="nuevo_usuario.contrasenia" required>
+            <div *ngIf="password.errors && (password.dirty || password.touched)">
+              <p *ngIf="password.errors.required" class="required-input">{{'NuevoUsuario.Input' | translate}}</p>
+            </div>
           </div>
 
           <div>
-            <button class="btn btn-lg btn-primary btn-block bttn-lg" type="submit" (click)="enviar();NuevoUsuario.reset();">{{ 'NuevoUsuario.Sesion' | translate}}</button>
+            <button class="btn btn-lg btn-primary btn-block bttn-lg" (click)="enviar();NuevoUsuario.reset();" type="submit" >{{ 'NuevoUsuario.Sesion' | translate}}</button>
             <a href="signup" style="font-size:16pt;">{{'NuevoUsuario.Registro' | translate}}</a>
           </div>
       </form>

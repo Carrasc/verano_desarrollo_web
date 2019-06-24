@@ -1,0 +1,19 @@
+<div class="div-forma-anuncio">
+  <form #Donacion="ngForm">
+    <div class="form-group">
+      <label for="donador">{{'Donacion.Donador' | translate}}</label>
+      <input type="text" class="form-control" id="razon" placeholder="{{'Donacion.DonadorP' | translate}}" [(ngModel)]="donacion.donador" name="donador">
+    </div>
+  
+      <div class="form-group">
+      <label for="cantidad">{{'Donacion.Cantidad' | translate}}</label>
+      <input type="text" class="form-control" id="cantidad" placeholder="{{'Donacion.CantidadP' | translate}}" name="animales" [(ngModel)]="donacion.cantidad">
+    </div>
+  
+      <div class="form-group">
+      <label for="mensaje">{{'Donacion.Mensaje' | translate}}</label>
+      <input type="text" class="form-control" id="mensaje" placeholder="{{'Donacion.MensajeP' | translate}}" name="mensaje" [(ngModel)]="donacion.mensaje"  #name="ngModel" required="required">
+    </div>
+      <button type="submit" class="btn btn-success" >{{ 'Donacion.Donar' | translate }}</button>
+  </form>
+</div>

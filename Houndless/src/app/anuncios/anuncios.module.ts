@@ -12,10 +12,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AdopcionesComponent } from './adopciones/adopciones.component';
 import { AdopcionComponent } from './adopcion/adopcion.component';
 import { NuevaAdopcionComponent } from './nueva-adopcion/nueva-adopcion.component';
-//npm install @ngx-translate/core @ngx-translate/http-loader --save
-
+import { AdoptarComponent} from './adoptar/adoptar.component';
+import { DonarComponent } from './donar/donar.component';
+//npm instal
 @NgModule({
-  declarations: [AnuncioComponent, NuevoAnuncioComponent, AdopcionesComponent, AdopcionComponent, NuevaAdopcionComponent],
+  declarations: [AnuncioComponent, NuevoAnuncioComponent, AdopcionesComponent, AdopcionComponent, NuevaAdopcionComponent, DonarComponent, AdoptarComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -34,7 +35,10 @@ import { NuevaAdopcionComponent } from './nueva-adopcion/nueva-adopcion.componen
     NuevoAnuncioComponent,
     AnuncioComponent,
     AdopcionesComponent,
+    AdoptarComponent,
+    DonarComponent,
     AdopcionComponent,
+    NuevaAdopcionComponent
   ]
 })
 export class AnunciosModule { }

@@ -22,7 +22,7 @@ export class NuevaAdopcionComponent implements OnInit {
 
   enviar(){
     
-     this.router.navigate(['',this.nueva_adopcion]);
+     this.router.navigate(['/adopciones',this.nueva_adopcion]);
      console.log(this.nueva_adopcion);
   }
 

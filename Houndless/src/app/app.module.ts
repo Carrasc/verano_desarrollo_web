@@ -14,8 +14,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 // Componentes del module anuncios
 import { AnuncioComponent } from './anuncios/anuncio/anuncio.component';
 import { NuevoAnuncioComponent } from './anuncios/nuevo-anuncio/nuevo-anuncio.component';
+import { NuevaAdopcionComponent } from './anuncios/nueva-adopcion/nueva-adopcion.component';
 import { AdopcionesComponent } from './anuncios/adopciones/adopciones.component';
 import { AdopcionComponent } from './anuncios/adopcion/adopcion.component';
+import {AdoptarComponent} from './anuncios/adoptar/adoptar.component';
+import { DonarComponent } from './anuncios/donar/donar.component';
 
 // Componentes del module perfiles
 import { PerfilComponent } from './perfiles/perfil/perfil.component';
@@ -38,7 +41,6 @@ import { FormsModule }   from '@angular/forms';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NuevaAdopcionComponent } from './anuncios/nueva-adopcion/nueva-adopcion.component';
 //npm install @ngx-translate/core @ngx-translate/http-loader --save
 
 import {MatDialogModule} from '@angular/material/dialog';
@@ -58,7 +60,7 @@ const routes: Routes = [
         component: NuevoAnuncioComponent
     },
     {
-      path: 'perfil_usuario',
+      path: 'perfil_usuario/:id',
       component: PerfilComponent
     },
     {
@@ -121,6 +123,6 @@ const routes: Routes = [
   exports:[RouterModule, MatDialogModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [NuevaAdopcionComponent, NuevoAnuncioComponent]
+  entryComponents: [NuevaAdopcionComponent, NuevoAnuncioComponent, AdoptarComponent, DonarComponent]
 })
 export class AppModule { }

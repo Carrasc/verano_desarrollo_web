@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AnunciosService}  from '../../services/anuncios.service';
+import { MatDialog, MatDialogConfig } from "@angular/material";
+import { DonarComponent } from 'src/app/anuncios/donar/donar.component';
+
 
 @Component({
   selector: 'anuncio',
@@ -11,7 +14,7 @@ export class AnuncioComponent implements OnInit {
   anuncios;
   test = [];
 
-  constructor(anunciosService: AnunciosService) { 
+  constructor(anunciosService: AnunciosService, private dialogAdoptar: MatDialog) { 
     
     this.anuncios = anunciosService.getAnuncios();
     for (let i in this.anuncios){
@@ -23,6 +26,15 @@ export class AnuncioComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  onCreateDonacion(){
+    const dialogConfigAdopcion = new MatDialogConfig();
+    dialogConfigAdopcion.disableClose = false;
+    dialogConfigAdopcion.autoFocus = true;
+    dialogConfigAdopcion.width = "700px";
+    dialogConfigAdopcion.height = "auto";
   
+    this.dialogAdoptar.open(DonarComponent, dialogConfigAdopcion);
+  }
 
 }
