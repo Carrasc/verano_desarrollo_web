@@ -3,5 +3,12 @@
 </div>-->
 
 <div class="div-principal-anuncios">
+  <div>
+    <form class="form-inline md-form mr-auto mb-4">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button mdbBtn size="sm" color="warning" outline="true" rounded="true" class="btn btn-success my-2 my-sm-0"
+        mdbWavesEffect type="submit">Search</button>
+    </form>
+  </div>  
   <adopcion-app [data]="adop" *ngFor="let adop of adopciones"></adopcion-app>
 </div>

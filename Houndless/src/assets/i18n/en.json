@@ -6,14 +6,18 @@
         "Adopcion": "Adoptions", 
         "Informacion": "Information", 
         "Perfil": "User profile", 
+        "Graficas": "Graphs",
         "Anuncio": "+ Post",
         "Anuncio-nueva-adopcion": "+ Adoption"
     },
     "NuevoAnuncio":
     {
         "titulo":"Write the title of the adoption post",
+        "titulo-placeholder":"Type a title",
         "descripcion":"Here write what you consider important about the dog, like its current condition, size, etc",
+        "descripcion-placeholder":"Type a description",
         "ubicacion":"Where did you find the dog. Its relevant because it might be a lost dog of the area",
+        "ubicacion-placeholder":"Type the geographical coordinates",
         "raza":"Select the race, if you dont know, you can select other",
         "publicar": "Post",
         "imagen": "Upload an image for the post"
@@ -21,8 +25,11 @@
     "NuevaAdopcion":
     {
         "titulo":"Write the title of the adoption post",
+        "tituloP": "Type a title",
         "descripcion":"Here write what you consider important about the dog, like its current condition, size, etc",
+        "descripcionP":"Type a description",
         "edad_perro":"The aproximate age of the dog",
+        "edad_perroP":"Type the approximate age of the dog",
         "raza":"Select the race, if you dont know, you can select other",
         "publicar": "Post",
         "imagen": "Upload an image for the post"
@@ -39,7 +46,7 @@
     "Asociacion":
     {
         "Donar":"Donate",
-        "Contactar":"",
+        "Contactar":"Contact",
         "Publicaciones": "See posts"
     },
     "NuevoUsuario":
@@ -57,5 +64,34 @@
         "Contrasenia2": "Repeat password",
         "Contrasenia2P": "Rewrite the password",
         "Crear": "Create user"
+    }, 
+    "Donacion":
+    {
+        "Donador": "Donor",
+        "Cantidad": "Amount to donate",
+        "Mensaje": "Donation message",
+        "DonadorP": "Type the donor message, can be anonymous",
+        "CantidadP": "Type the amount in pesos",
+        "MensajeP": "Type a message you want to send to the dog`s care.",
+        "Donar": "¡Donate!"
+    },
+    "Informacion":
+    {
+        "Carousel-1": "Love them as they loves you.",
+        "Carousel-2": "They need a house like you.",
+        "Carousel-3": "Treat them as you want to be treated.",
+        "Mision": "Mission",
+        "Vision": "Vision",
+        "Valores": "Values"
+    },
+    "Perfil":
+    {
+        "Editar": "Edit",
+        "Informacion":"Personal information",
+        "Nombre":"Full name",
+        "Cuenta":"Account Data",
+        "Correo":"E-mail",
+        "Telefono":"Telefonic Number",
+        "Metodo-donacion": "Add donation method"
     }
 }

@@ -2,17 +2,17 @@
 <form #NuevoAnuncio="ngForm">
     <div class="form-group">
       <label for="titulo">{{'NuevoAnuncio.titulo' | translate}}</label>
-      <input type="text" class="form-control" id="titulo" placeholder="Agregue un nuevo t&iacute;tulo a su anuncio." [(ngModel)]="nuevo_anuncio.titulo" name="titulo">
+      <input type="text" class="form-control" id="titulo" placeholder="{{'NuevoAnuncio.titulo-placeholder' | translate}}" [(ngModel)]="nuevo_anuncio.titulo" name="titulo">
     </div>
   
      <div class="form-group">
       <label for="descripcion">{{'NuevoAnuncio.descripcion' | translate}}</label>
-      <input type="text" class="form-control" id="descripcion" placeholder="Agregue una descripci&oacute;n a su anuncio." name="descripcion" [(ngModel)]="nuevo_anuncio.descripcion">
+      <input type="text" class="form-control" id="descripcion" placeholder="{{'NuevoAnuncio.descripcion-placeholder' | translate}}" name="descripcion" [(ngModel)]="nuevo_anuncio.descripcion">
     </div>
   
       <div class="form-group">
       <label for="ubicacion">{{'NuevoAnuncio.ubicacion' | translate}}</label>
-      <input type="text" class="form-control" id="ubicacion" placeholder="Agregue sus coordenadas" name="ubicacion" [(ngModel)]="nuevo_anuncio.ubicacion"  #name="ngModel" required="required">
+      <input type="text" class="form-control" id="ubicacion" placeholder="{{'NuevoAnuncio.ubicacion-placeholder' | translate}}" name="ubicacion" [(ngModel)]="nuevo_anuncio.ubicacion"  #name="ngModel" required="required">
     </div>
   
     <div class="form-group">

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 // Module anuncios
 import { AnunciosModule } from './anuncios/anuncios.module';
@@ -45,10 +45,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import  { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GraficasComponent } from './components/graficas/graficas.component';
 // npm install --save @angular/material @angular/cdk @angular/animations
 // Meter a imports MatDialogModule y BrowserAnimationsModule. Exportar MatDialogueModule
 // Luego meter a entryComponent el componente a ser mostrado en el pop up 
 // Finalmente agregar al algular.json, styles -> "input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 const routes: Routes = [
     {
@@ -91,6 +93,10 @@ const routes: Routes = [
     {
       path:'signup',
       component: SignupComponent
+    },
+    {
+      path:'graficas',
+      component: GraficasComponent
     }
 ];
 
@@ -99,7 +105,8 @@ const routes: Routes = [
     AppComponent,
     TituloComponent,
     NavbarComponent,
-    InformacionComponent,  
+    InformacionComponent,
+    GraficasComponent,  
   ],
   imports: [
     FormsModule,
@@ -118,9 +125,11 @@ const routes: Routes = [
       }
     }),
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
   ],
   exports:[RouterModule, MatDialogModule],
+  schemas: [ NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [NuevaAdopcionComponent, NuevoAnuncioComponent, AdoptarComponent, DonarComponent]

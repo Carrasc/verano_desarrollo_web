@@ -1,19 +1,25 @@
 
 <div class="div-principal-anuncios">
-    <div *ngFor="let anuncio of anuncios" class="div-principal-publicacion" >
-        <div class="div-principal-imagen" >
-          <img [src]="anuncio.img_path" alt="Foto Perrito">
-      </div>
-      <div class="div-principal-informacion">
-          <h1>{{anuncio.titulo}}</h1>
-          <p style="font-weight: bold">{{anuncio.usuario}} </p>
-          <p>{{anuncio.descripcion}} </p>
-          <p style="font-style: italic">{{'Anuncio.Raza' | translate}}: {{ anuncio.raza }} </p>
-          <a *ngFor="let tag of anuncio.tags; let i = index" href="#" class="badge badge-pill badge-info" style="margin-right: 5px">{{ anuncio.tags[i] }}</a>
-      </div>
-      <div class="boton-donaciones-principal">
-        <button class="btn btn-default boton" (click)="onCreateDonacion()">{{'Anuncio.Donar' | translate}}</button>
-        <button class="btn btn-default boton">{{'Anuncio.Detalle' | translate}}</button>
-      </div>
+  <div>
+    <form class="form-inline md-form mr-auto mb-4">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button mdbBtn size="sm" color="warning" outline="true" rounded="true" class="btn btn-success my-2 my-sm-0"
+        mdbWavesEffect type="submit">Search</button>
+    </form>
   </div>
+  <div *ngFor="let anuncio of anuncios" class="div-principal-publicacion" >
+      <div class="div-principal-imagen" >
+        <img [src]="anuncio.img_path" alt="Foto Perrito">
+    </div>
+    <div class="div-principal-informacion">
+        <h1>{{anuncio.titulo}}</h1>
+        <p style="font-weight: bold">{{anuncio.usuario}} </p>
+        <p>{{anuncio.descripcion}} </p>
+        <p style="font-style: italic">{{'Anuncio.Raza' | translate}}: {{ anuncio.raza }} </p>
+        <p>{{ anuncio.estado }}, {{anuncio.municipio}} </p>
+        <a *ngFor="let tag of anuncio.tags; let i = index" href="#" class="badge badge-pill badge-info" style="margin-right: 5px">{{ anuncio.tags[i] }}</a>
+    </div>
+    <div class="boton-donaciones-principal">
+      <button class="btn btn-default boton" (click)="onCreateDonacion()">{{'Anuncio.Donar' | translate}}</button>
+    </div>
 </div>

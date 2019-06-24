@@ -1,14 +1,11 @@
-<div class="div-asociaciones-imagen">
-    <img [src]="asociacion.logo_path" alt="Card image" style="width:100%">
-</div>
-<div class="div-asociaciones-informacion">
-    <div>
-        <h4 class="card-title"> {{asociacion.nombre}}</h4>
-        <p>{{asociacion.descripcion}}</p>
-        <a href="index.html" class="btn btn-primary">Ver publicaciones</a>
-        <a href="#" class="btn btn-secondary">Contactar</a>
-        <a href="https://www.paypal.me/pelagiodaniel" class="btn btn-secondary">Donar</a>
+    <div class="div-asociaciones-imagen">
+        <img [src]="asociacion.logo_path" alt="Association logo" style="width:100%">
     </div>
-</div>
-
-
+    <div class="div-asociaciones-informacion">
+            <h4 class="card-title"> {{asociacion.nombre}}</h4>
+            <p>{{asociacion.descripcion}}</p>
+            <a href="index.html" class="btn btn-primary">{{'Asociacion.Publicaciones' |translate}}</a>
+            <a href="#" class="btn btn-secondary">{{'Asociacion.Contactar' |translate}}</a>
+            <a href="https://www.paypal.me/pelagiodaniel" class="btn btn-secondary">{{'Asociacion.Donar' |translate}}</a>
+        
+    </div>

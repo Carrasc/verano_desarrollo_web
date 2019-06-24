@@ -6,14 +6,18 @@
         "Adopcion": "Adopción", 
         "Informacion": "Información", 
         "Perfil": "Perfil", 
+        "Graficas": "Gráficas",
         "Anuncio": "+ Anuncio",
         "Anuncio-nueva-adopcion": "+ Adopción"
     },
     "NuevoAnuncio":
     {
         "titulo":"Escriba el título del anuncio",
+        "titulo-placeholder":"Agregue el nuevo título",
         "descripcion":"Aquí escriba toda la información que considere importante sobre la condición actual del perro",
+        "descipcion-placeholder":"Agregue la descripción del anuncio",
         "ubicacion":"Dónde fue encontrado el perro. Es relevante porque puede ser un perrito perdido del área",
+        "ubicacion-placeholder":"Agregue sus coordenadas",
         "raza":"Seleccione la raza, si no la conoce, seleccione otro",
         "publicar": "Publicar",
         "imagen": "Seleccione una imagen"
@@ -78,5 +82,24 @@
         "CantidadP": "Escriba la cantidad a donar en pesos",
         "MensajeP": "Escriba algún mensaje que deseé hacer llegar al cuidador del perro",
         "Donar": "¡Donar!"
+    },
+    "Informacion":
+    {
+        "Carousel-1": "Ámalos como ellos a ti.",
+        "Carousel-2": "Necesitan una casa como tú.",
+        "Carousel-3": "Trátalos como quieres ser tratado.",
+        "Mision": "Misión",
+        "Vision": "Visión",
+        "Valores": "Valores"
+    },
+    "Perfil":
+    {
+        "Editar": "Editar",
+        "Informacion":"Información Personal",
+        "Nombre":"Nombre completo",
+        "Cuenta":"Datos de cuenta",
+        "Correo":"Correo",
+        "Telefono":"Número telefónico",
+        "Metodo-donacion": "Agregar método de donación"
     }
 }
