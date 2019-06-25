@@ -15,12 +15,15 @@
         "titulo":"Escriba el título del anuncio",
         "titulo-placeholder":"Agregue el nuevo título",
         "descripcion":"Aquí escriba toda la información que considere importante sobre la condición actual del perro",
-        "descipcion-placeholder":"Agregue la descripción del anuncio",
+        "descripcion-placeholder":"Agregue la descripción del anuncio",
         "ubicacion":"Dónde fue encontrado el perro. Es relevante porque puede ser un perrito perdido del área",
         "ubicacion-placeholder":"Agregue sus coordenadas",
         "raza":"Seleccione la raza, si no la conoce, seleccione otro",
         "publicar": "Publicar",
-        "imagen": "Seleccione una imagen"
+        "imagen": "Seleccione una imagen",
+        "municipio": "Municipio",
+        "estado": "Estado",
+        "tags":"Tags"
     },
     "NuevaAdopcion":
     {
@@ -101,5 +104,9 @@
         "Correo":"Correo",
         "Telefono":"Número telefónico",
         "Metodo-donacion": "Agregar método de donación"
+    },
+    "SearchBar":
+    {
+        "Buscar": "Buscar"
     }
 }

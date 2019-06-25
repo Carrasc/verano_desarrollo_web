@@ -4,7 +4,10 @@ export class NuevaAdopcion {
       public titulo?: string,
       public descripcion?: string,
       public raza?:string,
-      public edad_perro?:number
+      public edad_perro?:number,
+      public municipio?: string,
+      public estado?: string,
+      public tags?: string
     ) {  }
   
   }

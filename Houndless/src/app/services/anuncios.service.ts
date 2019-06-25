@@ -53,6 +53,18 @@ export class AnunciosService {
       municipio: "Cuajimalpa",
       tags: ["perro", "herido", "negro"],
       usuario: "luiscbilbao@gmail.com"
+    },
+    {
+      id: "4",
+      img_path:"assets/imgs/doggo.jpg",
+      titulo:"Cachorro herido de la pata",
+      descripcion:"Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.",
+      raza: "Chihuahua",
+      coordenadas:["12345", "54321"],
+      estado: "CDMX",
+      municipio: "Cuajimalpa",
+      tags: ["perro", "herido", "negro", "hola", "adios"],
+      usuario: "luiscbilbao@gmail.com"
     }
     ];
   }

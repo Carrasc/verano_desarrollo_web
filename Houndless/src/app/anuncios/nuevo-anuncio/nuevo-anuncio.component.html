@@ -10,11 +10,6 @@
       <input type="text" class="form-control" id="descripcion" placeholder="{{'NuevoAnuncio.descripcion-placeholder' | translate}}" name="descripcion" [(ngModel)]="nuevo_anuncio.descripcion">
     </div>
   
-      <div class="form-group">
-      <label for="ubicacion">{{'NuevoAnuncio.ubicacion' | translate}}</label>
-      <input type="text" class="form-control" id="ubicacion" placeholder="{{'NuevoAnuncio.ubicacion-placeholder' | translate}}" name="ubicacion" [(ngModel)]="nuevo_anuncio.ubicacion"  #name="ngModel" required="required">
-    </div>
-  
     <div class="form-group">
       <label for="raza">{{'NuevoAnuncio.raza' | translate}}</label>
       <select class="form-control" id="raza" [(ngModel)]="nuevo_anuncio.raza" name="raza" required="required">
@@ -24,11 +19,26 @@
     </div>
 
     <div class="form-group">
+      <label for="municipio">{{'NuevoAnuncio.municipio' | translate}}</label>
+      <input type="text" class="form-control" id="municipio" placeholder="{{'NuevoAnuncio.municipio' | translate}}" name="municipio" [(ngModel)]="nuevo_anuncio.municipio"  #name="ngModel" required="required">
+    </div>
+
+    <div class="form-group">
+      <label for="estado">{{'NuevoAnuncio.estado' | translate}}</label>
+      <input type="text" class="form-control" id="estado" placeholder="{{'NuevoAnuncio.estado' | translate}}" name="estado" [(ngModel)]="nuevo_anuncio.estado"  #name="ngModel" required="required">
+    </div>
+
+    <div class="form-group">
+      <label for="tags">{{'NuevoAnuncio.tags' | translate}}</label>
+      <input type="text" class="form-control" id="tags" placeholder="{{'NuevoAnuncio.tags' | translate}}" name="tags" [(ngModel)]="nuevo_anuncio.tags"  #name="ngModel" required="required">
+    </div>
+
+    <div class="form-group">
       <label for="img_path">{{'NuevoAnuncio.imagen' | translate}}</label><br>
       <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
       <button (click)="fileInput.click()">Select File</button>
     </div>
-  
+
      <button type="submit" class="btn btn-success" (click)="enviar();NuevoAnuncio.reset();">{{ 'NuevoAnuncio.publicar' | translate }}</button>
   </form>
 </div>

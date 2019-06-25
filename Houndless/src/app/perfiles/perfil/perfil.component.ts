@@ -11,17 +11,16 @@ import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
 export class PerfilComponent implements OnInit {
 
   @Input()id;
-  @Input()perfiles;
+  perfiles;
   sub;
 
   constructor(private _Activatedroute:ActivatedRoute, private _router:Router, perfilesService:PerfilesService) {
-
-		  		this.sub=this._Activatedroute.paramMap.subscribe(params => { 
-		         console.log(params);
-              this.id = params.get('id'); 
-              
-		     	 });
-          this.perfiles = perfilesService.getPerfiles(this.id);
+    this.sub=this._Activatedroute.paramMap.subscribe(params => { 
+        console.log(params);
+        this.id = params.get('id'); 
+        
+      });
+    this.perfiles = perfilesService.getPerfiles(this.id);
   }
 
   ngOnInit() {

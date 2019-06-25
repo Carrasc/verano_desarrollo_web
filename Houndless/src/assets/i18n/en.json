@@ -20,7 +20,11 @@
         "ubicacion-placeholder":"Type the geographical coordinates",
         "raza":"Select the race, if you dont know, you can select other",
         "publicar": "Post",
-        "imagen": "Upload an image for the post"
+        "imagen": "Upload an image for the post",
+        "municipio": "City",
+        "estado": "State",
+        "tags":"Tags"
+
     },
     "NuevaAdopcion":
     {
@@ -93,5 +97,9 @@
         "Correo":"E-mail",
         "Telefono":"Telefonic Number",
         "Metodo-donacion": "Add donation method"
+    },
+    "SearchBar":
+    {
+        "Buscar": "Search"
     }
 }
