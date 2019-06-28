@@ -13,7 +13,8 @@ export class PerfilesService {
       nombre:"Luis Fernando Carrasco",
       correo:"luis@gmail.com",
       celular: "5541303478",
-      contrasenia: "contra"
+      contrasenia: "contra",
+      paypal_link: "link/link"
     },{
       id:"2",
       nombre:"Daniel Pelagio",

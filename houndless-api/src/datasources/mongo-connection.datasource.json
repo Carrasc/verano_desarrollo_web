@@ -1,0 +1,11 @@
+{
+  "name": "mongo_connection",
+  "connector": "mongodb",
+  "url": "mongodb+srv://carrasc:Papichulo1109_@cluster0-xe56d.mongodb.net/houndless_db?retryWrites=true&w=majority",
+  "host": "cluster0-xe56d.mongodb.net",
+  "port": 27017,
+  "user": "carrasc",
+  "password": "Papichulo1109_",
+  "database": "houndless_db",
+  "useNewUrlParser": true
+}
