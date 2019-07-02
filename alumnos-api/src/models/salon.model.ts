@@ -1,6 +1,6 @@
 import { Entity, model, property } from '@loopback/repository';
 import { hasMany } from '@loopback/repository';
-import { Alumno, AlumnoRelations } from './alumno.model';
+import { Alumno, AlumnoWithRelations } from './alumno.model';
 
 @model({ settings: {} })
 export class Salon extends Entity {
@@ -26,7 +26,6 @@ export class Salon extends Entity {
   @hasMany(() => Alumno)
   alumnos?: Alumno[];
 
-
   constructor(data?: Partial<Salon>) {
     super(data);
   }
@@ -34,7 +33,7 @@ export class Salon extends Entity {
 
 export interface SalonRelations {
   // describe navigational properties here
-  alumnos?: AlumnoRelations[];
+  alumnos?: AlumnoWithRelations[];
 }
 
 export type SalonWithRelations = Salon & SalonRelations;

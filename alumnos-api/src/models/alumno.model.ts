@@ -1,5 +1,5 @@
-import { Entity, model, property } from '@loopback/repository';
-import { SalonRelations } from './salon.model';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { Salon, SalonWithRelations } from './salon.model';
 
 @model({ settings: {} })
 export class Alumno extends Entity {
@@ -22,8 +22,8 @@ export class Alumno extends Entity {
   })
   matricula: string;
 
-  @property()
-  salonId?: number;
+  @belongsTo(() => Salon)
+  salonId: number;
 
 
   constructor(data?: Partial<Alumno>) {
@@ -33,7 +33,7 @@ export class Alumno extends Entity {
 
 export interface AlumnoRelations {
   // describe navigational properties here
-  salon?: SalonRelations;
+  salon?: SalonWithRelations;
 }
 
 export type AlumnoWithRelations = Alumno & AlumnoRelations;

@@ -14,18 +14,20 @@ export class AnuncioComponent implements OnInit {
   anuncios;
   test = [];
 
-  constructor(anunciosService: AnunciosService, private dialogAdoptar: MatDialog) { 
-    
-    this.anuncios = anunciosService.getAnuncios();
-    for (let i in this.anuncios){
-      this.test[i] = this.anuncios[i].tags;
-      console.log(this.test[i]);
-    }
-    
+  constructor(private anunciosService: AnunciosService, private dialogAdoptar: MatDialog) { 
   }
 
   ngOnInit() {
+    this.getAnuncios();
   }
+
+  getAnuncios() {
+    this.anuncios = [];
+    this.anunciosService.getAnuncios().subscribe((data: {}) => {
+      console.log(data);
+      this.anuncios = data;
+    });
+}
 
   onCreateDonacion(){
     const dialogConfigAdopcion = new MatDialogConfig();

@@ -1,13 +1,15 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import { Anuncios, AnunciosWithRelations} from './anuncios.model';
+import { Adopciones, AdopcionesWithRelations } from './adopciones.model';
 
 @model({settings: {}})
 export class Perfil extends Entity {
   @property({
-    type: 'number',
+    type: 'string',
     id: true,
     required: true,
   })
-  id: number;
+  correo: string;
 
   @property({
     type: 'string',
@@ -31,12 +33,6 @@ export class Perfil extends Entity {
     type: 'string',
     required: true,
   })
-  correo: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
   cel: string;
 
   @property({
@@ -50,6 +46,12 @@ export class Perfil extends Entity {
   })
   paypal_link?: string;
 
+  @hasMany(() => Anuncios)
+  anuncios?: Anuncios[];
+
+  @hasMany(() => Adopciones)
+  adopciones?: Adopciones[];
+
 
   constructor(data?: Partial<Perfil>) {
     super(data);
@@ -58,6 +60,8 @@ export class Perfil extends Entity {
 
 export interface PerfilRelations {
   // describe navigational properties here
+  anuncios?: AnunciosWithRelations[];
+  adopciones?:AdopcionesWithRelations[];
 }
 
 export type PerfilWithRelations = Perfil & PerfilRelations;

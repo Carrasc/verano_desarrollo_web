@@ -84,7 +84,7 @@ export class PerfilController {
     return await this.perfilRepository.updateAll(perfil, where);
   }
 
-  @get('/perfil/{id}', {
+  @get('/perfil/{correo}', {
     responses: {
       '200': {
         description: 'Perfil model instance',
@@ -92,11 +92,11 @@ export class PerfilController {
       },
     },
   })
-  async findById(@param.path.number('id') id: number): Promise<Perfil> {
-    return await this.perfilRepository.findById(id);
+  async findById(@param.path.string('correo') correo: string): Promise<Perfil> {
+    return await this.perfilRepository.findById(correo);
   }
 
-  @patch('/perfil/{id}', {
+  @patch('/perfil/{correo}', {
     responses: {
       '204': {
         description: 'Perfil PATCH success',
@@ -104,13 +104,13 @@ export class PerfilController {
     },
   })
   async updateById(
-    @param.path.number('id') id: number,
+    @param.path.string('correo') correo: string,
     @requestBody() perfil: Perfil,
   ): Promise<void> {
-    await this.perfilRepository.updateById(id, perfil);
+    await this.perfilRepository.updateById(correo, perfil);
   }
 
-  @put('/perfil/{id}', {
+  @put('/perfil/{correo}', {
     responses: {
       '204': {
         description: 'Perfil PUT success',
@@ -118,20 +118,20 @@ export class PerfilController {
     },
   })
   async replaceById(
-    @param.path.number('id') id: number,
+    @param.path.string('correo') correo: string,
     @requestBody() perfil: Perfil,
   ): Promise<void> {
-    await this.perfilRepository.replaceById(id, perfil);
+    await this.perfilRepository.replaceById(correo, perfil);
   }
 
-  @del('/perfil/{id}', {
+  @del('/perfil/{correo}', {
     responses: {
       '204': {
         description: 'Perfil DELETE success',
       },
     },
   })
-  async deleteById(@param.path.number('id') id: number): Promise<void> {
-    await this.perfilRepository.deleteById(id);
+  async deleteById(@param.path.string('correo') correo: string): Promise<void> {
+    await this.perfilRepository.deleteById(correo);
   }
 }
