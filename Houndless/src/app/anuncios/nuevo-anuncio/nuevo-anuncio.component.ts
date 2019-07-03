@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NuevoAnuncio} from '../../models/nuevo-anuncio';
+import { NuevoAnuncio } from '../../models/nuevo-anuncio';
+import { AnunciosService } from '../../services/anuncios.service';
 
 import {Router, ActivatedRoute} from '@angular/router';
 
@@ -10,21 +11,38 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class NuevoAnuncioComponent implements OnInit {
   nuevo_anuncio : NuevoAnuncio;
-  razas=["Chihuahua", "Paston Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
+  razas=["Chihuahua", "Pastor Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
   selectedFile:File;
 
-  constructor(private router: Router) { 
+  
+
+  constructor(private router: Router, private anunciosService: AnunciosService) { 
     this.nuevo_anuncio = new NuevoAnuncio();
   }
 
   ngOnInit() {
+
   }
 
   enviar(){
-    
-   this.router.navigate(['',this.nuevo_anuncio]);
-    console.log(this.nuevo_anuncio);
-    // upload code goes here
+    this.nuevo_anuncio.id = "3";
+    this.nuevo_anuncio.tags = ["Blanco", "sucio"];
+    this.nuevo_anuncio.perfilId = "1";
+    this.nuevo_anuncio.img_path = "assets/imgs/10.jpg";
+    //this.submitted = true;
+    //this.loading = true;
+
+    this.anunciosService.addAnuncio(this.nuevo_anuncio)
+    .subscribe(
+      res => {
+          this.router.navigate(['']);
+          //console.log("El pelash");
+      },
+      err => {
+          console.log("CHUPA");
+      });;
+        
+
   }
 
   onFileChanged(event) {
@@ -32,5 +50,6 @@ export class NuevoAnuncioComponent implements OnInit {
     console.log(this.selectedFile);
   }
 
+  
 
 }

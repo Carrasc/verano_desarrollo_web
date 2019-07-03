@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError, tap, count } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -60,8 +60,9 @@ getAnuncio(id): Observable<any> {
 
 addAnuncio (anuncio): Observable<any> {
   console.log(anuncio);
-  return this.http.post<any>(this.endpoint + '/', JSON.stringify(anuncio), this.httpOptions).pipe(
-    tap((alumno) => console.log(`added anuncio w/ id=${anuncio.id}`)),
+  console.log(JSON.stringify(anuncio));
+  return this.http.post(this.endpoint + '/', JSON.stringify(anuncio), this.httpOptions).pipe(
+    tap((anuncio) => console.log(`added anuncio w/ id=${anuncio}`)),
     catchError(this.handleError<any>('addAnuncio'))
   );
 }
@@ -72,6 +73,7 @@ updateAnuncio (id, anuncio): Observable<any> {
     catchError(this.handleError<any>('updateAnuncio'))
   );
 }
+
 /*constructor() { }
 
   getAnuncios(){

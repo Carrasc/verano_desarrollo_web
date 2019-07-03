@@ -1,11 +1,11 @@
 import {Count, CountSchema,Filter, repository, Where, } from '@loopback/repository';
 import {del, get, getWhereSchemaFor, param, patch, post, requestBody,} from '@loopback/rest';
 import {Adopciones} from '../models/adopciones.model';
-import {PerfilRepository} from '../repositories';
+import {PerfilAdopcionesRepository} from '../repositories/perfil-adopciones.repository';
   
   export class PerfilAdopcionesController {
     constructor(
-      @repository(PerfilRepository) protected perfilRepo: PerfilRepository,
+      @repository(PerfilAdopcionesRepository) protected perfilAdopRepo: PerfilAdopcionesRepository,
     ) {}
   
     @post('/perfil/{id}/adopciones', {
@@ -20,7 +20,7 @@ import {PerfilRepository} from '../repositories';
       @param.path.string('id') id: string,
       @requestBody() adopcion: Adopciones,
     ): Promise<Adopciones> {
-      return await this.perfilRepo.adopciones(id).create(adopcion);
+      return await this.perfilAdopRepo.adopciones(id).create(adopcion);
     }
   
     @get('/perfil/{id}/adopciones', {
@@ -39,7 +39,7 @@ import {PerfilRepository} from '../repositories';
       @param.path.string('id') id: string,
       @param.query.object('filter') filter?: Filter<Adopciones>,
     ): Promise<Adopciones[]> {
-      return await this.perfilRepo.adopciones(id).find(filter);
+      return await this.perfilAdopRepo.adopciones(id).find(filter);
     }
   
     @patch('/perfil/{id}/adopciones', {
@@ -55,7 +55,7 @@ import {PerfilRepository} from '../repositories';
       @requestBody() anuncio: Partial<Adopciones>,
       @param.query.object('where', getWhereSchemaFor(Adopciones)) where?: Where<Adopciones>,
     ): Promise<Count> {
-      return await this.perfilRepo.adopciones(id).patch(anuncio, where);
+      return await this.perfilAdopRepo.adopciones(id).patch(anuncio, where);
     }
   
     @del('/perfil/{id}/adopciones', {
@@ -70,6 +70,6 @@ import {PerfilRepository} from '../repositories';
       @param.path.string('id') id: string,
       @param.query.object('where', getWhereSchemaFor(Adopciones)) where?: Where<Adopciones>,
     ): Promise<Count> {
-      return await this.perfilRepo.adopciones(id).delete(where);
+      return await this.perfilAdopRepo.adopciones(id).delete(where);
     }
   }

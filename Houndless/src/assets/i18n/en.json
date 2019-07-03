@@ -23,6 +23,7 @@
         "imagen": "Upload an image for the post",
         "municipio": "City",
         "estado": "State",
+        "colonia": "Suburb",
         "tags":"Tags"
 
     },

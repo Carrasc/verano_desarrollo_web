@@ -1,44 +1,76 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { map, catchError, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AdopcionesService {
 
-  constructor() { }
+  endpoint = 'http://localhost:3000/adopciones';
+	httpOptions = {
+  		headers: new HttpHeaders({
+    	'Content-Type':  'application/json'
+ 	 })
+	};
 
-  getAdopciones(){
-    return[{
-      id:"1",
-      img_path:"assets/imgs/7.jpg",
-      titulo:"Cachorro herido de la pata",
-      descripcion:"Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.",
-      raza: "Chihuahua",
-      estado: "CDMX",
-      municipio: "Cuajimalpa",
-      tags: ["perro", "herido", "gris"],
-      usuario: "luiscbilbao@gmail.com"
-    },{
-      id:"2",
-      img_path:"assets/imgs/8.jpg",
-      titulo:"Cachorro con desnutrición",
-      descripcion:"Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.",
-      raza: "Otro",
-      estado: "Puebla",
-      municipio: "Puebla",
-      tags: ["perro", "herido", "negro"],
-      usuario: "luiscbilbao@gmail.com"
-    },{
-      id:"3",
-      img_path:"assets/imgs/9.jpg",
-      titulo:"Perrito con cáncer",
-      descripcion:"Encontré un perrito por los puentes de santa fe, tiene una herida en la pata derecha y está muy flaco. Lo voy a llevar a una veterinaria cerca de Santa Fe a tratar las heridas.",
-      raza: "Gran Danés",
-      estado: "CDMX",
-      municipio: "Álvaro Obregón",
-      tags: ["perro", "herido", "verde"],
-      usuario: "luiscbilbao@gmail.com"
-    }
-    ];
+  constructor(private http: HttpClient) { }
+
+  private extractData(res: Response) {
+  let body = res;
+  return body || { };
   }
+
+	getAdopciones(): Observable<any> {
+		
+		return this.http.get(this.endpoint).pipe(
+	    map(this.extractData));
+	    
+		
+	}
+
+	private handleError<T> (operation = 'operation', result?: T) {
+  return (error: any): Observable<T> => {
+
+    // TODO: send the error to remote logging infrastructure
+    console.error(error); // log to console instead
+
+    // TODO: better job of transforming error for user consumption
+    console.log(`${operation} failed: ${error.message}`);
+
+    // Let the app keep running by returning an empty result.
+    return of(result as T);
+  };
+}
+
+/*
+deleteAlumnos(id): Observable<any> {
+  return this.http.delete<any>(this.endpoint + '/' + id, this.httpOptions).pipe(
+    tap(_ => console.log(`deleted alumno matricula=${id}`)),
+    catchError(this.handleError<any>('deleteAlumno'))
+  );
+}*/
+
+
+getAdopcion(id): Observable<any> {
+  return this.http.get(this.endpoint + '/' + id).pipe(
+    map(this.extractData));
+}
+
+addAdopcion (adopcion): Observable<any> {
+  console.log(adopcion);
+  return this.http.post<any>(this.endpoint + '/', JSON.stringify(adopcion), this.httpOptions).pipe(
+    tap((adopcion) => console.log(`added adopcion w/ id=${adopcion.id}`)),
+    catchError(this.handleError<any>('addAdopcion'))
+  );
+}
+
+updateAdopcion (id, adopcion): Observable<any> {
+  return this.http.put(this.endpoint + '/' + id, JSON.stringify(adopcion), this.httpOptions).pipe(
+    tap(_ => console.log(`updated adopcion id=${id}`)),
+    catchError(this.handleError<any>('updateAdopcion'))
+  );
+}
 }

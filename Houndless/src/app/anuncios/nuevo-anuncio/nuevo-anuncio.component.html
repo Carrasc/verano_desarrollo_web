@@ -29,6 +29,11 @@
     </div>
 
     <div class="form-group">
+      <label for="colonia">{{'NuevoAnuncio.colonia' | translate}}</label>
+      <input type="text" class="form-control" id="colonia" placeholder="{{'NuevoAnuncio.colonia' | translate}}" name="colonia" [(ngModel)]="nuevo_anuncio.colonia"  #name="ngModel" required="required">
+    </div>
+
+    <div class="form-group">
       <label for="tags">{{'NuevoAnuncio.tags' | translate}}</label>
       <input type="text" class="form-control" id="tags" placeholder="{{'NuevoAnuncio.tags' | translate}}" name="tags" [(ngModel)]="nuevo_anuncio.tags"  #name="ngModel" required="required">
     </div>
@@ -39,6 +44,6 @@
       <button (click)="fileInput.click()">Select File</button>
     </div>
 
-     <button type="submit" class="btn btn-success" (click)="enviar();NuevoAnuncio.reset();">{{ 'NuevoAnuncio.publicar' | translate }}</button>
+     <button type="submit" class="btn btn-success" (click)="enviar()">{{ 'NuevoAnuncio.publicar' | translate }}</button>
   </form>
 </div>

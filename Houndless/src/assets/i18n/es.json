@@ -23,6 +23,7 @@
         "imagen": "Seleccione una imagen",
         "municipio": "Municipio",
         "estado": "Estado",
+        "colonia": "Colonia",
         "tags":"Tags"
     },
     "NuevaAdopcion":

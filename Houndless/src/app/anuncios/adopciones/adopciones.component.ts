@@ -12,16 +12,20 @@ export class AdopcionesComponent implements OnInit {
   adopciones;
   test = [];
 
-  constructor(adopcionesService: AdopcionesService) {
-    this.adopciones = adopcionesService.getAdopciones();
-    for (let i in this.adopciones){
-      this.test[i] = this.adopciones[i].tags;
-      console.log(this.test[i]);
-    }
+  constructor(private adopcionesService: AdopcionesService) {
    }
 
 
   ngOnInit() {
+    this.getAdopciones();
+  }
+
+  getAdopciones(){
+    this.adopciones = [];
+    this.adopcionesService.getAdopciones().subscribe((data: {}) => {
+      console.log(data);
+      this.adopciones = data;
+    });
   }
 
 }

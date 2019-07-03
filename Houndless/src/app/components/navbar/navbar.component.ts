@@ -35,8 +35,8 @@ export class NavbarComponent implements OnInit {
     const dialogConfigAnuncio = new MatDialogConfig();
     dialogConfigAnuncio.disableClose = false;
     dialogConfigAnuncio.autoFocus = false;
-    dialogConfigAnuncio.width = "80%";
-    dialogConfigAnuncio.height = "95%";
+    dialogConfigAnuncio.width = "60%";
+    dialogConfigAnuncio.height = "80%";
     if(this.dialogAnuncio.openDialogs.length==0)
     {
       this.dialogAnuncio.open(NuevoAnuncioComponent, dialogConfigAnuncio);
@@ -48,8 +48,8 @@ export class NavbarComponent implements OnInit {
     const dialogConfigAdopcion = new MatDialogConfig();
     dialogConfigAdopcion.disableClose = false;
     dialogConfigAdopcion.autoFocus = false;
-    dialogConfigAdopcion.width = "80%";
-    dialogConfigAdopcion.height = "95%";
+    dialogConfigAdopcion.width = "60%";
+    dialogConfigAdopcion.height = "80%";
     if(this.dialogAdopcion.openDialogs.length==0)
     {
       this.dialogAdopcion.open(NuevaAdopcionComponent, dialogConfigAdopcion);
