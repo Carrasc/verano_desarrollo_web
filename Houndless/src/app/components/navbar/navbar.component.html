@@ -1,6 +1,6 @@
-<header *ngIf="router.url != '/login'">
+<header *ngIf="currentUser">
             <!-- Fixed navbar -->
-    <nav *ngIf="router.url != '/signup'" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="index.html">HOUNDLESS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,9 @@
             <li class="nav-item my-2 my-sm-0">
                 <a class="nav-link" href="graficas" >{{'Navbar.Graficas' | translate }}</a>
             </li>
+            <li class="nav-item">
+                <a  class="nav-link" (click)="logout()">Logout </a>
+              </li>
             <li class="nav-item my-2 my-sm-0">
                 <button class="btn btn-success my-2 my-sm-0" (click)="onCreateAnuncio()" style="margin-left: 7px">{{'Navbar.Anuncio' | translate }}</button>
             </li>

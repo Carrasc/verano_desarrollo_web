@@ -1,7 +1,6 @@
 export class NuevoAnuncio {
 
     constructor(
-      public id?: string,
       public img_path?: string,
       public titulo?: string,
       public descripcion?: string,

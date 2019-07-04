@@ -4,7 +4,8 @@ export class NuevoUsuario {
       public nombre_completo?: string,
       public correo?: string,
       public contrasenia?:string,
-      public contrasenia2?: string
+      public contrasenia2?: string,
+      public token?:string
     ) {  }
   
   }

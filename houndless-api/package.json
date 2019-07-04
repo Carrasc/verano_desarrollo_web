@@ -46,20 +46,28 @@
     "!*/__tests__"
   ],
   "dependencies": {
-    "@loopback/boot": "^1.4.3",
-    "@loopback/context": "^1.20.1",
-    "@loopback/core": "^1.8.4",
-    "@loopback/openapi-v3": "^1.6.4",
+
     "@loopback/repository": "^1.8.1",
-    "@loopback/rest": "^1.16.2",
     "@loopback/rest-explorer": "^1.2.4",
     "@loopback/service-proxy": "^1.2.4",
-    "loopback-connector-mongodb": "^4.2.0"
+    "@types/bcryptjs": "^2.4.2",
+    "@types/lodash": "^4.14.135",
+    "bcryptjs": "^2.4.3",
+    "isemail": "^3.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "loopback-connector-mongodb": "^4.2.0",
+
+    "@loopback/authentication": "^0.8.0",
+    "@loopback/boot": "^0.8.0",
+    "@loopback/context": "^0.8.0",
+    "@loopback/core": "^0.6.0",
+    "@loopback/openapi-v3": "^0.7.0",
+    "@loopback/rest": "^0.7.0",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0"
   },
   "devDependencies": {
-    "@loopback/build": "^2.0.2",
-    "@loopback/testlab": "^1.6.2",
-    "@types/node": "^10.14.9",
     "@typescript-eslint/parser": "^1.10.2",
     "@typescript-eslint/eslint-plugin": "^1.10.2",
     "@loopback/eslint-config": "^1.1.2",
@@ -67,6 +75,15 @@
     "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-eslint-plugin": "^2.1.0",
     "eslint-plugin-mocha": "^5.3.0",
-    "typescript": "~3.5.2"
+    "typescript": "~3.5.2",
+
+    "@loopback/build": "^0.5.0",
+    "@loopback/testlab": "^0.7.0",
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^8.10.4",
+    "@types/passport": "^0.4.5",
+    "@types/passport-http": "^0.3.6",
+    "mocha": "^5.0.5",
+    "source-map-support": "^0.5.4"
   }
 }

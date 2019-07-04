@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 //npm install @ngx-translate/core @ngx-translate/http-loader --save
 
@@ -7,17 +7,21 @@ import { NuevoAnuncioComponent } from 'src/app/anuncios/nuevo-anuncio/nuevo-anun
 import { NuevaAdopcionComponent } from 'src/app/anuncios/nueva-adopcion/nueva-adopcion.component';
 import { Router } from '@angular/router';
 
+import {AuthenticationService} from '../../services/authentication.service';
+import {NuevoUsuario} from '../../models/nuevo-usuario';
+
 @Component({
   selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Input() currentUser:NuevoUsuario;
 
   public activeLang = 'es';
   router: Router;
 
-	constructor( private translate: TranslateService, private dialogAnuncio: MatDialog, private dialogAdopcion: MatDialog, private _router: Router){
+	constructor( private translate: TranslateService, private dialogAnuncio: MatDialog, private dialogAdopcion: MatDialog, private _router: Router, private authenticationService:AuthenticationService){
       this.translate.setDefaultLang(this.activeLang);
       this.router = _router;      
   }
@@ -56,5 +60,8 @@ export class NavbarComponent implements OnInit {
     }
     //this.dialogAdopcion.open(NuevaAdopcionComponent);
   }
-
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
 }

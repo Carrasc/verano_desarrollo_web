@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
+import { NuevoUsuario } from './models/nuevo-usuario';
+
 
 @Component({
   selector: 'app-root',
@@ -6,19 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Practica clase Angular (Este titulo esta dentro de app.component.ts)';
-  variable2 = 'Otra variable'
+  currentUser:NuevoUsuario;
 
-  calificacion = 80;
-
-  leDiClick($event){
-    this.title = "Click";
-    console.log("Click", $event);
+  constructor(private authenticationService: AuthenticationService){
+    this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
-
-  leDiClick2($event){
-    this.title = "Click";
-    console.log("Click2", $event);
-  }
+  
 
 }

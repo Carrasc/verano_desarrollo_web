@@ -7,6 +7,11 @@ import {Adopciones} from '../models/adopciones.model';
 
 import {MongoConnectionDataSource} from '../datasources';
 
+export type Credentials = {
+  correo: string;
+  contrasenia: string;
+};
+
 export class PerfilRepository extends DefaultCrudRepository<
   Perfil,
   typeof Perfil.prototype.correo,

@@ -1,5 +1,5 @@
 
-<navbar *ngIf="router != '/login'"></navbar>
+<navbar [currentUser]="currentUser"></navbar>
 
 <div class="container-fluid mt-5">
         <router-outlet></router-outlet>

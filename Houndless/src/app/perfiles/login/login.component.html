@@ -5,7 +5,7 @@
           <h1 class="header-principal">Iniciar Sesi&oacute;n</h1>
           <div class="form-group">
             <label for="email">{{'NuevoUsuario.Correo' | translate}}</label>
-            <input #email="ngModel" type="text" class="form-control" id="email" placeholder="{{'NuevoUsuario.CorreoLP' | translate}}" [(ngModel)]="nuevo_usuario.correo" name="email" required>
+            <input #email="ngModel" type="text" class="form-control" id="email" placeholder="{{'NuevoUsuario.CorreoLP' | translate}}" [(ngModel)]="correo" name="email" required>
             <div *ngIf="email.errors && (email.dirty || email.touched)">
               <p *ngIf="email.errors.required" class="required-input">{{'NuevoUsuario.Input' | translate}}</p>
             </div>
@@ -13,7 +13,7 @@
         
           <div class="form-group">
             <label for="contrasenia">{{'NuevoUsuario.Contrasenia' | translate}}</label>
-            <input #password="ngModel" type="password" class="form-control" id="contrasenia" placeholder="{{'NuevoUsuario.ContraseniaLP' | translate}}" name="contraseña" [(ngModel)]="nuevo_usuario.contrasenia" required>
+            <input #password="ngModel" type="password" class="form-control" id="contrasenia" placeholder="{{'NuevoUsuario.ContraseniaLP' | translate}}" name="contraseña" [(ngModel)]="contrasenia" required>
             <div *ngIf="password.errors && (password.dirty || password.touched)">
               <p *ngIf="password.errors.required" class="required-input">{{'NuevoUsuario.Input' | translate}}</p>
             </div>

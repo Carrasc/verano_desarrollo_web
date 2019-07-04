@@ -40,7 +40,7 @@ import { FormsModule }   from '@angular/forms';
 //Module de angular para translate
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 //npm install @ngx-translate/core @ngx-translate/http-loader --save
 
 import {MatDialogModule} from '@angular/material/dialog';
@@ -52,39 +52,59 @@ import { GraficasComponent } from './components/graficas/graficas.component';
 // Finalmente agregar al algular.json, styles -> "input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+import { JwtInterceptor } from './helpers/jwt.interceptor';
+import { ErrorInterceptor   } from './helpers/error.interceptor';
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
     {
         path: '',
-        component: AnuncioComponent
+        component: AnuncioComponent,
+        canActivate: [AuthGuard]
+
     },
     {
         path: 'nuevoAnuncio',
-        component: NuevoAnuncioComponent
+        component: NuevoAnuncioComponent,
+        canActivate: [AuthGuard]
+
     },
     {
       path: 'perfil_usuario/:id',
-      component: PerfilComponent
+      component: PerfilComponent,
+      canActivate: [AuthGuard]
+
     },
     {
       path: 'nuevo_usuario',
-      component: FormNuevoUsuarioComponent
+      component: FormNuevoUsuarioComponent,
+      canActivate: [AuthGuard]
+
     },
     {
       path: 'nuevaAdopcion',
-      component: NuevaAdopcionComponent
+      component: NuevaAdopcionComponent,
+      canActivate: [AuthGuard]
+
     }
     ,
     {
       path:"informacion",
-      component: InformacionComponent
+      component: InformacionComponent,
+      canActivate: [AuthGuard]
+
     },
     {
       path:'adopciones',
-      component: AdopcionesComponent
+      component: AdopcionesComponent,
+      canActivate: [AuthGuard]
+
     },
     {
       path:'asociaciones',
-      component: AsociacionesComponent
+      component: AsociacionesComponent,
+      canActivate: [AuthGuard]
+
     },
     {
       path:'login',
@@ -96,7 +116,9 @@ const routes: Routes = [
     },
     {
       path:'graficas',
-      component: GraficasComponent
+      component: GraficasComponent,
+      canActivate: [AuthGuard]
+
     }
 ];
 
@@ -130,7 +152,10 @@ const routes: Routes = [
   ],
   exports:[RouterModule, MatDialogModule],
   schemas: [ NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [ 
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
   entryComponents: [NuevaAdopcionComponent, NuevoAnuncioComponent, AdoptarComponent, DonarComponent]
 })

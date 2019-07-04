@@ -11,6 +11,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class NuevoAnuncioComponent implements OnInit {
   nuevo_anuncio : NuevoAnuncio;
+  stringTags:string;
   razas=["Chihuahua", "Pastor Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
   selectedFile:File;
 
@@ -25,12 +26,9 @@ export class NuevoAnuncioComponent implements OnInit {
   }
 
   enviar(){
-    this.nuevo_anuncio.id = "3";
-    this.nuevo_anuncio.tags = ["Blanco", "sucio"];
+    this.nuevo_anuncio.tags = this.stringTags.split(",");
     this.nuevo_anuncio.perfilId = "1";
-    this.nuevo_anuncio.img_path = "assets/imgs/10.jpg";
-    //this.submitted = true;
-    //this.loading = true;
+    this.nuevo_anuncio.img_path = "assets/imgs/" + this.selectedFile.name;
 
     this.anunciosService.addAnuncio(this.nuevo_anuncio)
     .subscribe(
@@ -40,16 +38,10 @@ export class NuevoAnuncioComponent implements OnInit {
       },
       err => {
           console.log("CHUPA");
-      });;
-        
-
+      });
   }
 
   onFileChanged(event) {
     this.selectedFile = event.target.files[0];
-    console.log(this.selectedFile);
   }
-
-  
-
 }
