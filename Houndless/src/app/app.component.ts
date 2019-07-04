@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthenticationService } from './services/authentication.service';
 import { NuevoUsuario } from './models/nuevo-usuario';
 
+import { AuthGuard } from './guards/auth.guard';
+
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,6 @@ export class AppComponent {
   constructor(private authenticationService: AuthenticationService){
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
   }
-  
+
 
 }

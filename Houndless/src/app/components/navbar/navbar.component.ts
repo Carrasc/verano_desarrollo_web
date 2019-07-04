@@ -16,7 +16,7 @@ import {NuevoUsuario} from '../../models/nuevo-usuario';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input() currentUser:NuevoUsuario;
+  @Input() currentUser:NuevoUsuario ;
 
   public activeLang = 'es';
   router: Router;
