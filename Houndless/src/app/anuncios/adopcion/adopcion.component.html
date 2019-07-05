@@ -7,7 +7,8 @@
     <p style="font-weight: bold">{{data.usuario}} </p>
     <p>{{data.descripcion}}</p>
     <p style="font-style: italic">{{'Anuncio.Raza' | translate}}: {{ data.raza }} </p>
-    <p>{{ data.estado }}, {{data.municipio}} </p>
+    <p style="font-style: italic">{{'Adopcion.Edad' | translate}}: {{ data.edad_perro }} </p>
+    <p>{{ data.estado }}, {{data.municipio}}. Col. {{ data.colonia}} </p>
     <a *ngFor="let item of data.tags; let i = index" href="#" class="badge badge-pill badge-info" style="margin-right: 5px">{{ data.tags[i] }}</a>
   </div>
   <div class="boton-donaciones-principal">

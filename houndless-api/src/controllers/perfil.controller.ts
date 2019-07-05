@@ -202,6 +202,9 @@ public userService: UserService<Perfil, Credentials>,
                 token: {
                   type: 'string',
                 },
+                correo:{
+                  type:'string'
+                }
               },
             },
           },

@@ -16,7 +16,9 @@ import {NuevoUsuario} from '../../models/nuevo-usuario';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  @Input() currentUser:NuevoUsuario ;
+  @Input() currentUser:NuevoUsuario;
+  @Input() correo;
+  public link;
 
   public activeLang = 'es';
   router: Router;
@@ -24,6 +26,7 @@ export class NavbarComponent implements OnInit {
 	constructor( private translate: TranslateService, private dialogAnuncio: MatDialog, private dialogAdopcion: MatDialog, private _router: Router, private authenticationService:AuthenticationService){
       this.translate.setDefaultLang(this.activeLang);
       this.router = _router;      
+
   }
 
 	public cambiarLenguaje(lang) {
@@ -32,6 +35,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log("soy un payaso: " + this.correo);
+    this.link = "perfil_usuario/" + this.correo;
   }
 
   onCreateAnuncio(){
@@ -41,6 +46,8 @@ export class NavbarComponent implements OnInit {
     dialogConfigAnuncio.autoFocus = false;
     dialogConfigAnuncio.width = "60%";
     dialogConfigAnuncio.height = "80%";
+    dialogConfigAnuncio.id = this.correo;
+
     if(this.dialogAnuncio.openDialogs.length==0)
     {
       this.dialogAnuncio.open(NuevoAnuncioComponent, dialogConfigAnuncio);
@@ -54,6 +61,7 @@ export class NavbarComponent implements OnInit {
     dialogConfigAdopcion.autoFocus = false;
     dialogConfigAdopcion.width = "60%";
     dialogConfigAdopcion.height = "80%";
+    dialogConfigAdopcion.id = this.correo;
     if(this.dialogAdopcion.openDialogs.length==0)
     {
       this.dialogAdopcion.open(NuevaAdopcionComponent, dialogConfigAdopcion);

@@ -61,6 +61,7 @@ getAdopcion(id): Observable<any> {
 
 addAdopcion (adopcion): Observable<any> {
   console.log(adopcion);
+  console.log(JSON.stringify(adopcion));
   return this.http.post<any>(this.endpoint + '/', JSON.stringify(adopcion), this.httpOptions).pipe(
     tap((adopcion) => console.log(`added adopcion w/ id=${adopcion.id}`)),
     catchError(this.handleError<any>('addAdopcion'))

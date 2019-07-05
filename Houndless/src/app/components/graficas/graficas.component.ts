@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GraficasService} from '../../services/graficas.service';
 
 @Component({
   selector: 'app-graficas',
@@ -7,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraficasComponent implements OnInit {
   public chartType: string = 'horizontalBar';
-  public chartDatasets: Array<any> = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Razas callejeras en anuncios' }
-  ];
+  public chartDatasets: Array<any>;
   public chartLabels: Array<any> = ['Doberman', 'Chihuahua', 'Otro', 'Sahueso', 'Beagle', 'Pitbull'];
+  count;
+  public jsonString;
+  public chihuhua;
+  public finalC;
 
   public chartColors: Array<any> = [
     {
@@ -40,9 +43,20 @@ export class GraficasComponent implements OnInit {
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }
 
-  constructor() { }
+  constructor( private graficasService:GraficasService) { }
 
   ngOnInit() {
+
+    this.graficasService.getData("Doverman").subscribe((data: {}) => {
+      this.jsonString = JSON.stringify(data);
+      this.chihuhua = JSON.parse(this.jsonString);
+      this.finalC = this.chihuhua.count;
+    });
+    console.log(this.finalC);
+    var number: number = 1;
+    this.chartDatasets = [
+      { data: [number, 1, 1, 1, 1, 1, 0], label: 'Razas callejeras en anuncios' }
+    ];
   }
 
 }

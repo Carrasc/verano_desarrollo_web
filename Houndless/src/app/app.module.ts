@@ -22,7 +22,6 @@ import { DonarComponent } from './anuncios/donar/donar.component';
 
 // Componentes del module perfiles
 import { PerfilComponent } from './perfiles/perfil/perfil.component';
-import { FormNuevoUsuarioComponent } from './perfiles/form-nuevo-usuario/form-nuevo-usuario.component';
 import { AsociacionesComponent} from './perfiles/asociaciones/asociaciones.component';
 import { LoginComponent } from './perfiles/login/login.component';
 import { SignupComponent } from './perfiles/signup/signup.component';
@@ -77,7 +76,7 @@ const routes: Routes = [
     },
     {
       path: 'nuevo_usuario',
-      component: FormNuevoUsuarioComponent,
+      component: SignupComponent,
       canActivate: [AuthGuard]
 
     },

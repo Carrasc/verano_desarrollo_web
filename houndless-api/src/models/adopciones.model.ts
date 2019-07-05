@@ -6,7 +6,7 @@ export class Adopciones extends Entity {
   @property({
     type: 'string',
     id: true,
-    required: true,
+    required: false,
   })
   id: string;
 
@@ -34,6 +34,12 @@ export class Adopciones extends Entity {
     required: true,
   })
   raza: string;
+
+  @property({
+    type: 'number',
+    required: true,
+  })
+  edad_perro: number;
 
   @property({
     type: 'string',

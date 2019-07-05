@@ -46,7 +46,8 @@
         "Raza": "Breed"
     },
     "Adopcion":{
-        "Adoptar":"Adopt"
+        "Adoptar":"Adopt",
+        "Edad":"Age"
     },
     "Asociacion":
     {
@@ -56,7 +57,7 @@
     },
     "NuevoUsuario":
     {
-        "Nombre":"Full Name",
+        "Nombre":"Name",
         "NombreP":"Write your full name",
         "Sesion":"Sign In",
         "Registro":"Sign Up",
@@ -68,7 +69,13 @@
         "ContraseniaLP":"Write your password",
         "Contrasenia2": "Repeat password",
         "Contrasenia2P": "Rewrite the password",
-        "Crear": "Create user"
+        "Crear": "Create user",
+        "Celular":"Celular",
+        "ApellidoP":"Last Name",
+        "ApellidoM":"Middle Name",
+        "CelularP":"Write your phone number",
+        "ApellidoPP":"Write your Last Name",
+        "ApellidoMP":"Write your Middle Name"
     }, 
     "Donacion":
     {

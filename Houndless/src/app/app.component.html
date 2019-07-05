@@ -1,6 +1,6 @@
 
-<navbar [currentUser]="currentUser"></navbar>
+<navbar [currentUser]="currentUser" [correo]="correo"></navbar>
 
 <div class="container-fluid mt-5">
-        <router-outlet></router-outlet>
+        <router-outlet [correo]="correo" ></router-outlet>
  </div>

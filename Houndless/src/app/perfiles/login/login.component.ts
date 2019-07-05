@@ -29,18 +29,18 @@ export class LoginComponent implements OnInit {
 
   enviar(){
     this.submitted = true;
-        this.loading = true;
-        console.log(""+this.correo+" " +this.contrasenia);
-        this.authenticationService.login(this.correo, this.contrasenia)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    this.router.navigate([""]);
-                },
-                error => {
-                    this.error = error;
-                    this.loading = false;
-                });
-    }
+    this.loading = true;
+    console.log(""+this.correo+" " +this.contrasenia);
+    this.authenticationService.login(this.correo, this.contrasenia)
+        .pipe(first())
+        .subscribe(
+            data => {
+                this.router.navigate([""]);
+            },
+            error => {
+                this.error = error;
+                this.loading = false;
+            });
+  }
 
 }

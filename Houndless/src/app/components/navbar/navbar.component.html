@@ -1,7 +1,7 @@
 <header *ngIf="currentUser">
             <!-- Fixed navbar -->
     <nav  class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="index.html">HOUNDLESS</a>
+        <a class="navbar-brand" href="">HOUNDLESS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
             <a class="nav-link" href="informacion">{{'Navbar.Informacion' | translate }}</a>
             </li>
             <li class="nav-item my-2 my-sm-0">
-                <a class="nav-link" [routerLink]="['perfil_usuario', '1']" >{{'Navbar.Perfil' | translate }}</a>
+                <a class="nav-link" [routerLink]="link" >{{ correo }}</a>
             </li>
             <li class="nav-item my-2 my-sm-0">
                 <a class="nav-link" href="graficas" >{{'Navbar.Graficas' | translate }}</a>

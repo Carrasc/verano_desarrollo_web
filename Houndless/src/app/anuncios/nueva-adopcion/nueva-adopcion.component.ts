@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NuevaAdopcion } from '../../models/nueva-adopcion';
 import {Router, ActivatedRoute} from '@angular/router';
+import { AdopcionesService } from 'src/app/services/adopciones.service';
 
 
 @Component({
@@ -10,10 +11,11 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class NuevaAdopcionComponent implements OnInit {
   nueva_adopcion : NuevaAdopcion;
+  stringTags:string;
   razas=["Chihuahua", "Paston Alemán", "Beagle", "Doverman", "Pitbull", "Bulldog", "Golden Retreiever", "Xochoizquintle", "San Bernardo", "Sahueso", "Criollo"];
   selectedFile: File;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private adopcionService: AdopcionesService) {
     this.nueva_adopcion = new NuevaAdopcion();
   }
 
@@ -22,8 +24,20 @@ export class NuevaAdopcionComponent implements OnInit {
 
   enviar(){
     
-     this.router.navigate(['/adopciones',this.nueva_adopcion]);
-     console.log(this.nueva_adopcion);
+    this.nueva_adopcion.tags = this.stringTags.split(",");
+    console.log("ss "+ localStorage.getItem('correo'));
+    this.nueva_adopcion.perfilId = localStorage.getItem('correo');
+    this.nueva_adopcion.img_path = "assets/imgs/" + this.selectedFile.name;
+
+    this.adopcionService.addAdopcion(this.nueva_adopcion)
+    .subscribe(
+      res => {
+          this.router.navigate(['/adopciones']);
+          //console.log("El pelash");
+      },
+      err => {
+          console.log("CHA");
+      });
   }
 
   onFileChanged(event) {

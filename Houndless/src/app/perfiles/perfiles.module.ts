@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormNuevoUsuarioComponent } from './form-nuevo-usuario/form-nuevo-usuario.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FormsModule }   from '@angular/forms';
 
@@ -15,7 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [FormNuevoUsuarioComponent, PerfilComponent, AsociacionesComponent, AsociacionComponent, LoginComponent, SignupComponent],
+  declarations: [PerfilComponent, AsociacionesComponent, AsociacionComponent, LoginComponent, SignupComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -32,7 +31,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     PerfilComponent,
-    FormNuevoUsuarioComponent,
     AsociacionesComponent,
     LoginComponent,
     SignupComponent,

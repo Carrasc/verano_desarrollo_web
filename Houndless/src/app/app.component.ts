@@ -12,9 +12,11 @@ import { AuthGuard } from './guards/auth.guard';
 })
 export class AppComponent {
   currentUser:NuevoUsuario;
+  correo;
 
   constructor(private authenticationService: AuthenticationService){
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    this.correo = this.authenticationService.currentUserEmailV;
   }
 
 

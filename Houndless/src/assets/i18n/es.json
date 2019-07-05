@@ -24,7 +24,7 @@
         "municipio": "Municipio",
         "estado": "Estado",
         "colonia": "Colonia",
-        "tags":"Tags"
+        "tags":"Tags"        
     },
     "NuevaAdopcion":
     {
@@ -52,7 +52,8 @@
         "AnimalesP": "¿Cuántos animales tiene actualmente?",
         "Espacio": "Espacio",
         "EspacioP": "¿Cuenta con espacio para tener al perro? ¿De cuánto es?",
-        "Publicar": "¡Adoptar!"
+        "Publicar": "¡Adoptar!",
+        "Edad":"Edad"
     },
     "Asociacion":
     {
@@ -62,7 +63,7 @@
     },
     "NuevoUsuario":
     {
-        "Nombre":"Nombre Completo",
+        "Nombre":"Nombre",
         "NombreP":"Ingrese su nombre completo",
         "Sesion":"Iniciar Sesión",
         "Registro":"Registrarse",
@@ -75,7 +76,13 @@
         "Contrasenia2": "Repetir Contraseña",
         "Contrasenia2P": "Repita la contraseña previamente ingresada",
         "Crear": "Crear Usuario",
-        "Input": "CAMPO REQUERIDO"
+        "Input": "CAMPO REQUERIDO",
+        "Celular":"Celular",
+        "ApellidoP":"Apellido Paterno",
+        "ApellidoM":"Apellido Materno",
+        "CelularP":"Ingrese su número de celular",
+        "ApellidoPP":"Ingrese su apellido paterno",
+        "ApellidoMP":"Ingrese su apellido materno"
     },
     "Donacion":
     {
